@@ -1,0 +1,69 @@
+
+@font-face{font-family: 'OrnamentalInitial';
+    src: url('font/OrnamentalInitial.ttf');}
+
+@font-face{font-family: 'Aldine721Regular';
+    src: url('font/Aldine721Regular.otf');}
+
+body{font-family:'Aldine721Regular';
+color:rgb(131 121 79);
+background-image:url("images/1500.jpg");
+background-repeat: no-repeat;
+padding-top:400px;}
+
+.plaintext{font-family:'Aldine721Regular';
+font-size:12pt;}
+
+.article_container{max-height:700px;
+overflow-y:scroll;
+width: 70%;
+margin: auto;}
+
+.article_container::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #e6ddbc;
+	border-radius: 10px;
+}
+
+.article_container::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+.article_container::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.44, rgb(177 160 108)), color-stop(0.72, rgb(150 137 85)), color-stop(0.86, rgb(131 121 79)));
+}
+    
+.title{color:red;}
+.initial_letter{font-family:'OrnamentalInitial';
+font-size:60pt;}
+.other_letters{font-size:18pt;}
+.subtitle{font-size:12pt;}
+
+.byline{font-style:italic;}
+.publication_date{font-size:10pt;}
+
+
+.editor_note{text-align:center;}
+.bio{text-align:center;}
+.copy{text-align:center;
+font-style:italic;}
+
+figure img{box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+width:500px;
+border-radius:4px;
+margin-left:15%;}
+figcaption{font-size:10pt;
+text-align:center;}
+.credit{font-style:italic;}
+
+table{border:none;}
+table td{border:solid 1px lightgrey;
+padding:2px;}
+
+blockquote{font-style:italic;}
+
