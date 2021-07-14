@@ -4,6 +4,9 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+   
+<link rel="stylesheet" href="esempio.css">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
@@ -66,8 +69,43 @@
 
     </header>
 
-    <h1>this is the table of contents </h1>
+<body>
+<div class="article_container">
+<p class="title"><span class="initial_letter">T</span><span class="other_letters">itolo</span></p>
 
+<p class="subtitle">sottotitolo</p>
+<p class="byline">autore</p>
+<p class="publication_date">02/07/2021</p>
+<p class="plaintext">testo</p>
+
+<p class="editor_note">nota</p>
+<p class="bio">bio</p>
+<p class="copy">copia</p>
+
+<figure>
+<img src="Images/guardian1.jpg">
+<figcaption>Tech-based teaching may increase the advantages enjoyed by wealthier, better resourced pupils.<span class="credit"><span id="" class="mention-person" about="JohnMoore" data-label=”John Moore” data-sort=”MooreJohn”><span id="" class="mention-organization" about="GettyImages"> Photograph: John Moore/Getty Images</span></span></span></figcaption>
+</figure>
+
+<table border="1">
+<caption><b>Table 3.</b>Helpfulness of online collaboration in class in relation to how much they learned at home.</caption>
+<tr>
+<th>Helpfulness of online collaboration with peers</th><th>Learned less at home</th><th>Learned about same at home</th><th>Learned more at home</th>
+<hr>
+<tr>
+<td>Less helpful than in class</td><td>67% (710)</td><td>22% (230)</td><td>11% (113)</td>
+</tr>
+<tr>
+<td>The same</td><td>34% (248)</td><td>38% (272)</td><td>28% (119)</td>
+</tr>
+<tr>
+<td>Better than in class</td><td>24% (49)</td><td>24% (249)</td><td>52% (105)</td>
+</tr>
+</table> 
+
+<blockquote>“Most children have the tech in some form, but it might be using Dad’s mobile phone, or a flatscreen TV” Karen Giles, school head</blockquote>
+</div>
+</body>
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 
