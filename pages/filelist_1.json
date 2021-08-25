@@ -1,0 +1,15 @@
+ [ 
+    {
+         "label":"Covid Consequences",
+          "url":"CovidCons.html"
+    },
+    { 
+        "label":"Ebook History",
+        "url":"EbookHistory.html"
+    } ,
+    {
+        "label":"The 2010s and the Ebook", 
+        "url":"Vox the 2010s.html"
+    }
+]
+
