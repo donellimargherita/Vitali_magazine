@@ -32,7 +32,7 @@
 					}
 				});
 					
-			function load(file) {
+			function load(file) {	
 				$.ajax({
 					method: 'GET',
 					url: file,
@@ -44,8 +44,8 @@
 					error: function() {
 						alert('Could not load file '+file)
 					}
-			});
-		}
+				}	);
+			};
 	</script>
   </head>
   <body>
