@@ -23,7 +23,6 @@
 					success: function(d) {
 						for (var i=0; i<d.length; i++) {
 							var op = `<option value="`+d[i]+`"><a href='#' onclick='load("`+d[i].url+`")'>`+d[i].label+'</a></option'>` 
-							
 							$('#art-selector').append(op)
 						}	
 					},
