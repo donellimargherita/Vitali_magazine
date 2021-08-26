@@ -1,0 +1,57 @@
+@font-face {
+	font-family: normal;
+	src: url("https://www.dafont.com/oldnewspapertypes.font");
+	
+	font-family: italic;
+	src: url("https://www.fontget.com/font/im-fell-dw-pica-family/");
+	
+	font-family: gothic;
+	src: url("https://www.dafont.com/old-europe.font");
+	
+	font-family: circus;
+	src: url("https://www.fontspace.com/romantiques-font-f10202");
+}
+
+
+
+body {
+	background-image: url('gray_paper.jpg')
+}
+
+.title {
+	font-family: circus;
+}
+
+.subtitle {
+	font-family: gothic;
+}
+
+.byline {
+font-family: italic
+}
+.publication_date {
+font-family: italic
+}
+
+.introduction{
+font-family: italic
+}
+.plaintext{
+font-family: normal
+}
+
+aside
+
+.editor_note{
+font-family: italic
+}
+.bio{
+font-family: italic
+}
+.copy{
+font-family: italic
+}
+
+.initial_letter{
+font-family: gothic
+}
