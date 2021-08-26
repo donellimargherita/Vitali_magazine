@@ -19,14 +19,14 @@
 			function main() {
 				$.ajax({
 					method: 'GET',
-					url: 'filelist.json_1',
+					url: 'filelist_1.json',
 					success: function(d) {
 						for (var i=0; i<d.length; i++) {
 							var op = `<option value="`+d[i]+`"><a href='#' onclick='load("`+d[i].url+`")'>`+d[i].label+'</a></option'>` 
 							
 							$('#art-selector').append(op)
-							}	
-						},
+						}	
+					},
 					error: function() {
 						alert('No document to show')
 					}
@@ -45,8 +45,8 @@
 					error: function() {
 						alert('Could not load file '+file)
 					};
-				}	);
-			};
+				});
+			}
 	</script>
   </head>
   <body>
