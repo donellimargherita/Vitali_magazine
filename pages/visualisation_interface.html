@@ -21,7 +21,7 @@
 	<script type="text/javascript">
 	
 		$(document).ready(main);
-		
+		/*
 			function main() {
 				$.ajax({
 					method: 'GET',
@@ -36,6 +36,14 @@
 						alert('No document to show')
 					}
 				});
+			}*/
+			function main(){
+			$.getJSON("filelist_1.json", function(d) {
+			for (var i=0; i<d.length; i++) {
+							var li = `<li><a href="#" class="dropdown-item" onclick='load("`+d[i].url+`")'>`+d[i].label+`</a></li>`
+							$('#art-selector').append(li)
+						}
+			});
 			}
 					
 			function load(file) {	
