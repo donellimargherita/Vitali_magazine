@@ -36,9 +36,8 @@ font-size:60pt;}
 font-style:italic;}
 
 figure img{box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-width:500px;
-border-radius:4px;
-margin-left:15%;}
+width:100%;
+border-radius:4px;}
 figcaption{font-size:10pt;
 text-align:center;}
 .credit{font-style:italic;}
