@@ -1,44 +1,36 @@
 
-#file @font-face{font-family: 'OrnamentalInitial';
+@font-face{font-family: 'OrnamentalInitial';
     src: url('font/OrnamentalInitial.ttf');}
 
 @font-face{font-family: 'Aldine721Regular';
     src: url('font/Aldine721Regular.otf');}
 
-body{font-family:'Aldine721Regular';
-color:rgb(131 121 79);
+
+.article_container{font-family:'Aldine721Regular';
+color:#59433E;
 background-image:url("images/1500.jpg");
+background-attachment: fixed;
+background-position: center;
 background-repeat: no-repeat;
-padding-top:400px;}
+background-size: cover;
+padding-top:80px;}
+
+.article_container{border: 1px solid black;
+margin-top: 100px;
+margin-bottom: 100px;
+margin-right: 150px;
+margin-left: 80px;
+background-color: lightblue;}
 
 .plaintext{font-family:'Aldine721Regular';
-font-size:12pt;}
-
-.article_container{max-height:700px;
-overflow-y:scroll;
-width: 70%;
-margin: auto;}
-
-.article_container::-webkit-scrollbar-track
-{
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	background-color: #e6ddbc;
-	border-radius: 10px;
+font-size:12pt;
+margin-top: 300px;
+margin-bottom: 100px;
+margin-right: 400px;
+margin-left: 80px;
 }
 
-.article_container::-webkit-scrollbar
-{
-	width: 10px;
-	background-color: #F5F5F5;
-}
-
-.article_container::-webkit-scrollbar-thumb
-{
-	border-radius: 10px;
-	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.44, rgb(177 160 108)), color-stop(0.72, rgb(150 137 85)), color-stop(0.86, rgb(131 121 79)));
-}
-    
-.title{color:red;}
+.title{color:#0D0000;}
 .initial_letter{font-family:'OrnamentalInitial';
 font-size:60pt;}
 .other_letters{font-size:18pt;}
@@ -66,5 +58,3 @@ table td{border:solid 1px lightgrey;
 padding:2px;}
 
 blockquote{font-style:italic;}
-
-
