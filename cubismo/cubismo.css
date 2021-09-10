@@ -1,0 +1,83 @@
+
+@font-face{font-family: 'cubismo_mac';
+    src: url('font/cubismo_mac.ttf');}
+
+@font-face{font-family: "Bric-aBraqueNF";
+    src: url('font/Bric-aBraqueNF.otf');}
+
+@font-face{font-family: "Quicksand_Light";
+    src: url('font/Quicksand_Light.otf');}
+
+@font-face{font-family: "Quicksand_Book";
+    src: url('font/Quicksand_Book.otf');}
+
+@font-face{font-family: "Quicksand_Light_Oblique";
+    src: url('font/Quicksand_Light_Oblique.otf');}
+
+@font-face{font-family: "Quicksand_Bold";
+    src: url('font/Quicksand_Bold.otf');}   
+
+@font-face{font-family: "Quicksand_Bold_Oblique";
+    src: url('font/Quicksand_Bold_Oblique.otf');}     
+
+
+
+.article_container{font-family:"Quicksand_Book";
+color:black;
+background-image:url("images/cubismo_template.jpg");
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+padding-top:10px;}
+
+.plaintext{font-family:"Quicksand_Book";
+font-size:12pt;}
+
+
+.title{font-family:"Bric-aBraqueNF";
+font-size:45pt;
+text-align:center;
+color:#BF612A;
+letter-spacing: 3px;}
+.initial_letter{font-family: 'Bric-aBraqueNF'
+font-size:100pt;}
+.other_letters{font-size:18pt;}
+.subtitle{font-family:"Quicksand_Bold";
+font-size:18pt;
+text-align:center;}
+
+.byline{font-family:"Quicksand_Bold_Oblique";
+font-size:16pt;
+text-align:center;
+margin-top: 50px;
+margin-bottom: 50px;}
+.publication_date{font-size:16pt;
+margin-top: 50px;
+margin-bottom: 50px;
+text-align:center;}
+
+
+.editor_note{text-align:center;}
+.bio{text-align:center;}
+.copy{text-align:center;
+font-style:italic;}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+figcaption{font-family:"Quicksand_Light_Oblique";
+padding:10px;
+text-align:center;}
+.credit{font-style:italic;}
+
+table{border:none;}
+table td{border:solid 1px lightgrey;
+padding:2px;}
+
+blockquote{font-style:italic;}
+
+
