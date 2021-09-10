@@ -13,21 +13,11 @@ background-attachment: fixed;
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
-padding-top:80px;}
+padding:10px;}
 
-.article_container{border: 1px solid black;
-margin-top: 100px;
-margin-bottom: 100px;
-margin-right: 150px;
-margin-left: 80px;
-background-color: lightblue;}
 
 .plaintext{font-family:'Aldine721Regular';
 font-size:12pt;
-margin-top: 300px;
-margin-bottom: 100px;
-margin-right: 400px;
-margin-left: 80px;
 }
 
 .title{color:#0D0000;}
