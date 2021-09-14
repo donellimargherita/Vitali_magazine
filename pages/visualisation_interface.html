@@ -28,7 +28,7 @@ overflow-x:hidden;}
 	
 		$(document).ready(main);
 		
-			function main() {
+			/*function main() {
 				$.ajax({
 					method: 'GET',
 					url: 'filelist_1.json',
@@ -42,7 +42,7 @@ overflow-x:hidden;}
 						alert('No document to show')
 					}
 				});
-			}
+			}*/
 			function main(){
 			$.getJSON("filelist_1.json", function(d) {
 			for (var i=0; i<d.length; i++) {
