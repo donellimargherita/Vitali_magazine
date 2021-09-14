@@ -24,25 +24,29 @@ overflow-x:hidden;}
 	<script type="text/javascript" src="jquery-3.6.0.js"> </script>
 	<!-- scrivo lo script in js/jQuery-->
 	<script type="text/javascript">
+		$(document).ready(
+			function() {
+				$("#article_1").load("ebook/CovidCons/CovidCons.html")
+				;}
+				);
 	
-	
-		<!-- <!-- <!--$(document).ready(main); -->
+		<!--$(document).ready(main);
 		
-			<!-- /*function main() { -->
-				<!-- $.ajax({ -->
-					<!-- method: 'GET', -->
-					<!-- url: 'filelist_1.json', -->
-					<!-- success: function(d) { -->
-						<!-- for (var i=0; i<d.length; i++) { -->
-							<!-- var li = `<li><a href="#" class="dropdown-item" onclick='load("`+d[i].url+`")'>`+d[i].label+`</a></li>` -->
-							<!-- $('#art-selector').append(li) -->
-						<!-- }	 -->
-					<!-- }, -->
-					<!-- error: function() { -->
-						<!-- alert('No document to show') -->
-					<!-- } -->
-				<!-- }); -->
-			<!-- }*/ -->
+			/*function main() {
+				$.ajax({
+					method: 'GET',
+					url: 'filelist_1.json',
+					success: function(d) {
+						for (var i=0; i<d.length; i++) {
+							var li = `<li><a href="#" class="dropdown-item" onclick='load("`+d[i].url+`")'>`+d[i].label+`</a></li>`
+							$('#art-selector').append(li)
+						}	
+					},
+					error: function() {
+						alert('No document to show')
+					}
+				});
+			}*/
 			<!-- function main(){ -->
 			<!-- $.getJSON("filelist_1.json", function(d) { -->
 			<!-- for (var i=0; i<d.length; i++) { -->
@@ -65,31 +69,8 @@ overflow-x:hidden;}
 						<!-- alert('Could not load file '+file) -->
 					<!-- } -->
 				<!-- }); -->
-			<!-- }-->  -->
-		
-function main(){
-			$.getJSON("filelist_1.json", function(d) {
-			for (var i=0; i<d.length; i++)
-					var file="`+d[i].url+`"
-						});
-		
-					
-			function load(file) {	
-				$.ajax({
-					method: 'GET',
-					url: file,
-					success: function(d) {
-						
-						$('#file').html(d)
-						
-						$('.show').prop("checked", false)
-					},
-					error: function() {
-						alert('Could not load file '+file)
-					}
-				});
-			}
-		
+			<!-- } -->
+
 	</script>
   </head>
   <body>
@@ -233,28 +214,13 @@ function main(){
 
             <!-- article columns: 1st column for an article -->
             <div class="col-4 col-sm-4">
-              <div class="p-3 border bg-light"> <!--creating GUTTERS-->
-                <!--placing the selection of the article inside the nested column -->
-                <div class="dropdown">
-					<a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">		Select article
-					</a>
-					<ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="art-selector">
-						
-					</ul>
-				</div>
-              <p id="title">
-			  </p>
-			 <p id="file">
-			 </p>
-              </div>
+              <div class="p-3 border bg-light" >
+				<div id="article_1"
             </div>
             <!-- article columns: 2nd column for an article -->
             <div class="col-4 col-sm-4">
               <div class="p-3 border bg-light"> <!--creating GUTTERS-->
-                 <p id="title">
-			  </p>
-			 <p id="file">
-			 </p>
+                 
               </div>
             </div>
 			<!-- article columns: 3rd column for an article -->
