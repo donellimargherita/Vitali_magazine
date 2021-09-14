@@ -5,11 +5,11 @@
     },
     { 
         "label":"Ebook History",
-        "url":"EbookHistory.html"
+        "url":"ebook/EbookHistory/EbookHistory.html"
     } ,
     {
         "label":"The 2010s and the Ebook", 
-        "url":"Vox the 2010s.html"
+        "url":"ebook/Vox the 2010s/Vox the 2010s.html"
     },
     {  "label":"Education", 
         "url":"Issue_education/1.Guardian - Covid digital learrning/articolo1.html"}
