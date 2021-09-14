@@ -16,6 +16,7 @@
     <h1>Magazine Name</h1>
 
     <!--Navbar component from Bootsrap-->
+    <!--Navbar component from Bootsrap-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Menu</a>
@@ -28,19 +29,70 @@
               <a class="nav-link active" aria-current="page" href="../index.html">Home </a> <!--coverpage-->
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="table_of_contents.html">Table of contents</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link active" href="visualisation_interface.html">Article Visualisation</a> <!--the main interface with side by side visualisation of the articles-->
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="about.html"> About </a>
             </li>
             <li class="nav-item">
               <a class="nav-link active" href="documentation.html">Documentation</a>
             </li>
+			<li class="nav-item">
+              <!-- Button trigger modal -->
+				<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+				About
+				</button>
+
+				<!-- Modal -->
+					<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+						<div class="modal-dialog">
+						<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLabel">About</h5>
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						</div>
+						<div class="modal-body">
+							Some info about the group
+						</div>
+						<div class="modal-footer">
+						</div>
+						</div>
+						</div>
+					</div>
+            </li>
+            
             <li class="nav-item">
-              <a class="nav-link active" href="disclaimer.html">Disclaimer</a>
+              <!-- Button trigger modal -->
+				<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+				Disclaimer
+				</button>
+
+				<!-- Modal -->
+					<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+						<div class="modal-dialog">
+						<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLabel">About</h5>
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						</div>
+						<div class="modal-body">
+							<h2> Discalimer template from Vitali Slides </h2>
+								<p>The purpose of this web site is to explore various types of typographic and layout
+									style for text documents, as an end-of-course project for the "Information Modeling
+									and Web technologies" course of the Master Degree in Digital Humanities and
+									Digital Knowledge of the University of Bologna, under prof. Fabio Vitali.
+									The documents contained in this web site have been selected for their length and
+									complexity from XXX. Their publication here is not intended to be an alternative or
+									replace their original locations:
+									• File 1: http://aouhadosuvosh
+									• File 2: http://alekfpahvaoeh
+									• etc.
+									All copyrights and related rights on the content remain with their original owners.
+									All copyright on the typographic and layout choices are 2021 © XY </p>
+						</div>
+						<div class="modal-footer">
+						</div>
+						</div>
+						</div>
+					</div>
+            </li>
             </li>
           </ul>
         </div>
