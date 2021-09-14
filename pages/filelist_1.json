@@ -6,18 +6,22 @@
     { 
         "label":"Ebook History",
         "url":"ebook/EbookHistory/EbookHistory.html"
-    } ,
+    },
     {
         "label":"The 2010s and the Ebook", 
         "url":"ebook/Vox the 2010s/Vox the 2010s.html"
     },
-    {  "label":"New Yorker", 
+    {
+		"label":"New Yorker", 
         "url":"Issue_education/article2/articolo2.html"
-        },
-       {  "label":"High school students’ experience of online learning during Covid-19: the influence of technology and pedagogy", 
+    },
+    {
+		"label":"High school students’ experience of online learning during Covid-19: the influence of technology and pedagogy", 
         "url":"Issue_education/article3/articolo3.html"
-        },
-    {  "label":"The future of museum"
-       "url":"museum/VirtualMuseum/VirtualMuseum.html"}
+    },
+    {
+		"label":"The future of museum",
+		"url":"museum/VirtualMuseum/VirtualMuseum.html"
+	}
 ]
 
