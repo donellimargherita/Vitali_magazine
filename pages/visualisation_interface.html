@@ -26,39 +26,62 @@ overflow-x:hidden;}
 	<script type="text/javascript">
 	
 	
-		$(document).ready(main);
+		<!-- <!-- <!--$(document).ready(main); -->
 		
-			/*function main() {
-				$.ajax({
-					method: 'GET',
-					url: 'filelist_1.json',
-					success: function(d) {
-						for (var i=0; i<d.length; i++) {
-							var li = `<li><a href="#" class="dropdown-item" onclick='load("`+d[i].url+`")'>`+d[i].label+`</a></li>`
-							$('#art-selector').append(li)
-						}	
-					},
-					error: function() {
-						alert('No document to show')
-					}
-				});
-			}*/
-			function main(){
+			<!-- /*function main() { -->
+				<!-- $.ajax({ -->
+					<!-- method: 'GET', -->
+					<!-- url: 'filelist_1.json', -->
+					<!-- success: function(d) { -->
+						<!-- for (var i=0; i<d.length; i++) { -->
+							<!-- var li = `<li><a href="#" class="dropdown-item" onclick='load("`+d[i].url+`")'>`+d[i].label+`</a></li>` -->
+							<!-- $('#art-selector').append(li) -->
+						<!-- }	 -->
+					<!-- }, -->
+					<!-- error: function() { -->
+						<!-- alert('No document to show') -->
+					<!-- } -->
+				<!-- }); -->
+			<!-- }*/ -->
+			<!-- function main(){ -->
+			<!-- $.getJSON("filelist_1.json", function(d) { -->
+			<!-- for (var i=0; i<d.length; i++) { -->
+							<!-- var li = `<li><a href="#" class="dropdown-item" onclick='load("`+d[i].url+`")'>`+d[i].label+`</a></li>` -->
+							<!-- $('#art-selector').append(li) -->
+						<!-- } -->
+			<!-- }); -->
+			<!-- } -->
+					
+			<!-- function load(file) {	 -->
+				<!-- $.ajax({ -->
+					<!-- method: 'GET', -->
+					<!-- url: file, -->
+					<!-- success: function(d) { -->
+						<!-- $('#file').html(d) -->
+						<!-- //$('#title').html($('#file h1')) -->
+						<!-- $('.show').prop("checked", false) -->
+					<!-- }, -->
+					<!-- error: function() { -->
+						<!-- alert('Could not load file '+file) -->
+					<!-- } -->
+				<!-- }); -->
+			<!-- }-->  -->
+		
+function main(){
 			$.getJSON("filelist_1.json", function(d) {
-			for (var i=0; i<d.length; i++) {
-							var li = `<li><a href="#" class="dropdown-item" onclick='load("`+d[i].url+`")'>`+d[i].label+`</a></li>`
-							$('#art-selector').append(li)
-						}
-			});
-			}
+			for (var i=0; i<d.length; i++)
+					var file="`+d[i].url+`"
+						});
+		
 					
 			function load(file) {	
 				$.ajax({
 					method: 'GET',
 					url: file,
 					success: function(d) {
+						
 						$('#file').html(d)
-						//$('#title').html($('#file h1'))
+						
 						$('.show').prop("checked", false)
 					},
 					error: function() {
@@ -66,6 +89,7 @@ overflow-x:hidden;}
 					}
 				});
 			}
+		
 	</script>
   </head>
   <body>
@@ -227,27 +251,20 @@ overflow-x:hidden;}
             <!-- article columns: 2nd column for an article -->
             <div class="col-4 col-sm-4">
               <div class="p-3 border bg-light"> <!--creating GUTTERS-->
-                <!--placing the selection of the article inside the nested column -->
-                <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-                  <option selected>Select an article</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-                </select>
-              second article
+                 <p id="title">
+			  </p>
+			 <p id="file">
+			 </p>
               </div>
             </div>
 			<!-- article columns: 3rd column for an article -->
             <div class="col-4 col-sm-4">
               <div class="p-3 border bg-light"> <!--creating GUTTERS-->
-                <!--placing the selection of the article inside the nested column -->
-                <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-                  <option selected>Select an article</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-                </select>
-              second article
+                 <p id="title">
+			  </p>
+			 <p id="file">
+			 </p>
+             
               </div>
             </div>
           </div>
