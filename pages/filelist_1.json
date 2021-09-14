@@ -11,6 +11,9 @@
         "label":"The 2010s and the Ebook", 
         "url":"ebook/Vox the 2010s/Vox the 2010s.html"
     },
+    {  "label":"The Guardian", 
+        "url":"Issue_education/article1/articolo1.html"
+        },
     {  "label":"New Yorker", 
         "url":"Issue_education/article2/articolo2.html"
         },
