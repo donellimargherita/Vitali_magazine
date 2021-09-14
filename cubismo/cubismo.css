@@ -53,9 +53,14 @@ text-align:center;
 margin-top: 50px;
 margin-bottom: 50px;}
 .publication_date{font-size:16pt;
+text-align:center;
 margin-top: 50px;
 margin-bottom: 50px;
 text-align:center;}
+
+.introduction{font-family:"Quicksand_Bold";
+font-size:14pt;
+background-color:}
 
 
 .editor_note{text-align:center;}
