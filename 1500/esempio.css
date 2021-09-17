@@ -8,6 +8,7 @@
 
 .article_container{font-family:'Aldine721Regular';
 color:#59433E;
+text-align: justify;
 background-image:url("images/1500.jpg");
 background-attachment: fixed;
 background-position: center;
@@ -18,9 +19,11 @@ padding:10px;}
 
 .plaintext{font-family:'Aldine721Regular';
 font-size:12pt;
+text-align: justify;
 }
 
-.title{color:#0D0000;}
+.title{color:#0D0000;
+}
 .initial_letter{font-family:'OrnamentalInitial';
 font-size:60pt;}
 .other_letters{font-size:18pt;}
@@ -34,6 +37,8 @@ font-size:60pt;}
 .bio{text-align:center;}
 .copy{text-align:center;
 font-style:italic;}
+
+.introduction{}
 
 figure img{box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 width:100%;

@@ -23,25 +23,35 @@
 
 
 .article_container{font-family:"Quicksand_Book";
-color:black;
+color:#142740;
+text-align: justify;
 background-image:url("images/cubismo_template.jpg");
 background-attachment: fixed;
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
-padding-top:10px;}
+padding-top:10px;
+padding-right:5px;
+padding-left:5px;}
 
 .plaintext{font-family:"Quicksand_Book";
-font-size:12pt;}
+font-size:12pt;
+color:#142740;
+text-align:justify;}
 
+h2{font-family:"Quicksand_Bold";
+color:#F25C05;
+}
+
+h3{color:#F28705;}
 
 .title{font-family:"Bric-aBraqueNF";
-font-size:45pt;
+font-size:30pt;
 text-align:center;
-color:#BF612A;
+color:#F25C05;
 letter-spacing: 3px;}
-.initial_letter{font-family: 'Bric-aBraqueNF'
-font-size:100pt;}
+.initial_letter{font-family: 'Bric-aBraqueNF';
+font-size:50pt;}
 .other_letters{font-size:18pt;}
 .subtitle{font-family:"Quicksand_Bold";
 font-size:18pt;
@@ -60,7 +70,13 @@ text-align:center;}
 
 .introduction{font-family:"Quicksand_Bold";
 font-size:14pt;
-background-color:}
+color:#142740;
+background-color:#F29F05;
+padding-top:10pt;
+padding-bottom:10pt;
+padding-right:10pt;
+padding-left:10pt;
+text-align:justify;}
 
 
 .editor_note{text-align:center;}
@@ -72,16 +88,29 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 40%;
+  width: 100%;
 }
 figcaption{font-family:"Quicksand_Light_Oblique";
 padding:10px;
 text-align:center;}
 .credit{font-style:italic;}
 
-table{border:none;}
-table td{border:solid 1px lightgrey;
-padding:2px;}
+table{border-collapse: collapse;
+width: 100%;}
+
+.table-caption{font-family:"Quicksand_Bold";
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: lightgrey}
+
+th {
+  background-color: #F28705;
+  color: #142740;
 
 blockquote{font-style:italic;}
 
