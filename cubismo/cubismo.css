@@ -23,7 +23,7 @@
 
 
 .article_container{font-family:"Quicksand_Book";
-color:#142740;
+color:#2d2523;
 text-align: justify;
 background-image:url("images/cubismo_template.jpg");
 background-attachment: fixed;
@@ -36,19 +36,24 @@ padding-left:5px;}
 
 .plaintext{font-family:"Quicksand_Book";
 font-size:12pt;
-color:#142740;
+color:black;
 text-align:justify;}
 
-h2{font-family:"Quicksand_Bold";
-color:#F25C05;
+h1{font-family:"Quicksand_Bold";
+color:#2d2523;
 }
 
-h3{color:#F28705;}
+h2{font-family:"Quicksand_Bold";
+color:#2d2523;
+}
+
+h3{font-family:"Quicksand_Bold";
+color:#2d2523;}
 
 .title{font-family:"Bric-aBraqueNF";
 font-size:30pt;
 text-align:center;
-color:#F25C05;
+color:#7e776d;
 letter-spacing: 3px;}
 .initial_letter{font-family: 'Bric-aBraqueNF';
 font-size:50pt;}
@@ -70,8 +75,8 @@ text-align:center;}
 
 .introduction{font-family:"Quicksand_Bold";
 font-size:14pt;
-color:#142740;
-background-color:#F29F05;
+color:#2d2523;
+background-color:#cbc8bb;
 padding-top:10pt;
 padding-bottom:10pt;
 padding-right:10pt;
@@ -79,10 +84,14 @@ padding-left:10pt;
 text-align:justify;}
 
 
-.editor_note{text-align:center;}
-.bio{text-align:center;}
+.editor_note{text-align:justify;
+font-size:10pt;}
+.bio{text-align:justify;
+font-size:10pt;}
 .copy{text-align:center;
 font-style:italic;}
+footnotes{text-align:justify;
+font-size:10pt;}
 
 img {
   display: block;
@@ -93,7 +102,8 @@ img {
 figcaption{font-family:"Quicksand_Light_Oblique";
 padding:10px;
 text-align:center;}
-.credit{font-style:italic;}
+.credit{font-style:italic;
+font-size:10pt;}
 
 table{border-collapse: collapse;
 width: 100%;}
@@ -109,8 +119,8 @@ th, td {
 tr:nth-child(even){background-color: lightgrey}
 
 th {
-  background-color: #F28705;
-  color: #142740;
+  background-color: #cbc8bb;
+  color: #2d2523;
 
 blockquote{font-style:italic;}
 

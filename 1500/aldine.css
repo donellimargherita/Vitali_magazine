@@ -1,0 +1,85 @@
+
+@font-face{font-family: 'OrnamentalInitial';
+    src: url('font/OrnamentalInitial.ttf');}
+
+@font-face{font-family: 'Aldine721Regular';
+    src: url('font/Aldine721Regular.otf');}
+
+
+.article_container{font-family:'Aldine721Regular';
+color:#59433E;
+text-align: justify;
+background-image:url("images/1500.jpg");
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+padding:10px;}
+
+
+.plaintext{font-family:'Aldine721Regular';
+font-size:12pt;
+text-align: justify;}
+
+h2{color:#0D0000;}
+h3{color:#0D0000;}
+
+.title{color:#0D0000;}
+.initial_letter{font-family:'OrnamentalInitial';
+font-size:60pt;}
+.other_letters{font-size:18pt;}
+.subtitle{font-size:12pt;}
+
+.byline{font-style:italic;}
+.publication_date{font-size:10pt;}
+
+
+.editor_note{text-align:justify;
+font-size:10pt;}
+.bio{text-align:justify;
+font-size:10pt;}
+.copy{text-align:center;
+font-style:italic;
+font-size:10pt;}
+footnotes{text-align:justify;
+font-size:10pt;}
+
+.introduction{color:#59433E;
+background-color:#D9BEA7;
+padding-top:10pt;
+padding-bottom:10pt;
+padding-right:10pt;
+padding-left:10pt;
+text-align:justify;}
+
+img{
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 100%;
+box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+border-radius:4px;}
+
+figcaption{font-size:10pt;
+text-align:center;
+padding:10px;}
+.credit{font-style:italic;}
+
+table{border-collapse: collapse;
+width: 100%;}
+
+.table-caption{font-style:italic;}
+
+th, td {
+  text-align: left;
+  padding: 8px;}
+
+tr:nth-child(even){background-color:#D9BEA7 }
+
+th {background-color: #8C7B6C;
+color: #0D0000;
+table{border:none;}
+table td{border:solid 1px lightgrey;
+padding:2px;}
+
+blockquote{font-style:italic;}
