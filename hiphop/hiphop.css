@@ -12,6 +12,9 @@
 	src: url("font\RockSalt-Regular.ttf");
 }
 
+body {
+	overflow: auto;
+}
 
 .article_container{
 background-image: linear-gradient(to bottom right, red, yellow), url("graffiti-cloud.jpg");
