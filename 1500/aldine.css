@@ -5,7 +5,7 @@
 @font-face{font-family: 'Aldine721Regular';
     src: url('font/Aldine721Regular.otf');}
 
-
+body{overflow: scroll;}
 .article_container{font-family:'Aldine721Regular';
 color:#59433E;
 text-align: justify;
@@ -14,7 +14,8 @@ background-attachment: fixed;
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
-padding:10px;}
+padding:10px;
+overflow: scroll;}
 
 
 .plaintext{font-family:'Aldine721Regular';
