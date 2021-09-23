@@ -12,7 +12,9 @@
 	src: url("font\Romantiques Regular.ttf");
 }
 
-
+body {
+	overflow: scroll;
+}
 
 
 .article_container{
