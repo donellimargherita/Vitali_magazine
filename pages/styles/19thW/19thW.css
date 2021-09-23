@@ -12,9 +12,6 @@
 	src: url("font\Romantiques Regular.ttf");
 }
 
-body {
-	overflow: scroll;
-}
 
 
 .article_container{
@@ -25,7 +22,10 @@ background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
 padding-top:10px;
-overflow: scroll;}
+max-height:700px;
+overflow-y:scroll;
+width: 70%;
+margin: auto;}
 
 .plaintext{font-family:"OldNewspaperTypes";
 font-size:12pt;
