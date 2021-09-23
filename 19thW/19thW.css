@@ -12,6 +12,9 @@
 	src: url("font\Romantiques Regular.ttf");
 }
 
+body {
+	overflow: auto;
+}
 
 .article_container{
 color:black;
@@ -36,8 +39,6 @@ font-size:500%;
 text-align:center;
 color:black;
 letter-spacing: 1 px;}
-.initial_letter{font-family: "Old Europe";
-font-size:75pt;}
 .other_letters{font-size:18pt;}
 
 .subtitle{font-family:"Old Europe";
