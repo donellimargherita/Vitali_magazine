@@ -8,14 +8,13 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
-	<style>
-	#file {max-height:500px;
-	overflow-y:scroll;
-	overflow-x:hidden;}
-	</style>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
+<style>
+#file {max-height:500px;
+overflow-y:scroll;
+overflow-x:hidden;}
+</style>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
-<<<<<<< Updated upstream
 	
 	<!-- Custom CSS - in questo caso 18th century -->
 	<link rel="stylesheet" type="css" 
@@ -27,58 +26,13 @@
 	<script type="text/javascript">
 		$(document).ready(
 			function() {
-				$("#article_1").load("ebook/CovidCons/CovidCons.html")
-				$("#article_2").load("ebook/EbookHistory/EbookHistory.html")
-				$("#article_3").load("ebook/Vox the 2010s/Vox the 2010s.html")
-				}
-				);
-	
-		<!--$(document).ready(main);
-		
-			/*function main() {
-				$.ajax({
-					method: 'GET',
-					url: 'filelist_1.json',
-					success: function(d) {
-						for (var i=0; i<d.length; i++) {
-							var li = `<li><a href="#" class="dropdown-item" onclick='load("`+d[i].url+`")'>`+d[i].label+`</a></li>`
-							$('#art-selector').append(li)
-						}	
-					},
-					error: function() {
-						alert('No document to show')
-					}
+				$("#article_1").load("Issue_education/article1/articolo1.html")
+				$("#article_2").load("Issue_education/article2/articolo2.html")
+				$("#article_3").load("Issue_education/article3/articolo3.html")
 				});
-			}*/
-			<!-- function main(){ -->
-			<!-- $.getJSON("filelist_1.json", function(d) { -->
-			<!-- for (var i=0; i<d.length; i++) { -->
-							<!-- var li = `<li><a href="#" class="dropdown-item" onclick='load("`+d[i].url+`")'>`+d[i].label+`</a></li>` -->
-							<!-- $('#art-selector').append(li) -->
-						<!-- } -->
-			<!-- }); -->
-			<!-- } -->
-					
-			<!-- function load(file) {	 -->
-				<!-- $.ajax({ -->
-					<!-- method: 'GET', -->
-					<!-- url: file, -->
-					<!-- success: function(d) { -->
-						<!-- $('#file').html(d) -->
-						<!-- //$('#title').html($('#file h1')) -->
-						<!-- $('.show').prop("checked", false) -->
-					<!-- }, -->
-					<!-- error: function() { -->
-						<!-- alert('Could not load file '+file) -->
-					<!-- } -->
-				<!-- }); -->
-			<!-- } -->
-
+	
 	</script>
-=======
->>>>>>> Stashed changes
   </head>
-  
   <body>
     <!--Header part, that has to be in all the pages: title of the mag + menu navbar -->
     <header>
@@ -222,19 +176,19 @@
             <!-- article columns: 1st column for an article -->
             <div class="col-6 col-md-4">
               <div class="p-3 border bg-light" >
-				<div> Please select issue to read the article</div>
+				<div id="article_1"></div>
             </div>
 			</div>
             <!-- article columns: 2nd column for an article -->
             <div class="col-6 col-md-4">
               <div class="p-3 border bg-light"> 
-                 <div> Please select issue to read the article</div>
+                 <div id="article_2"></div>
               </div>
             </div>
 			<!-- article columns: 3rd column for an article -->
             <div class="col-6 col-md-4">
               <div class="p-3 border bg-light"> 
-                 <div> Please select issue to read the article</div>
+                 <div id="article_3"></div>
               </div>
             </div>
           </div>
