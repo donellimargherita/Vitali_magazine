@@ -32,8 +32,7 @@ font-size:500%;
 text-align:center;
 color: black;
 letter-spacing: 1 px;}
-.initial_letter{font-family: "degrassi";
-font-size:75pt;}
+
 .other_letters{font-size:18pt;}
 
 .subtitle{font-family:"Digitag";
@@ -45,6 +44,7 @@ font-size:16pt;
 text-align:center;
 margin-top: 1px;
 margin-bottom: 1px;}
+
 .publication_date{font-family:"Bungee";
 font-size:16pt;
 text-align:center;
