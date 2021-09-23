@@ -1,21 +1,21 @@
 
 @font-face{
-	font-family: "TiilliumWeb-Bold";
+	font-family: "Tiillium Bold";
     src: url("2030/Fonts/TitilliumWeb-Bold.ttf");
 	
-	font-family: "TitilliumWeb-Regular";
+	font-family: "Titillium";
     src: url("2030/Fonts/TitilliumWeb-Regular.ttf");
 	
-	font-family: "TitilliumWeb-Italic";
+	font-family: "Titillium Italic";
     src: url("2030/Fonts/TitilliumWeb-Italic.ttf");
 	
-	font-family: "TitilliumWeb-SemiBold";
+	font-family: "Titillium SemiBold";
     src: url("2030/Fonts/TitilliumWeb-SemiBold.ttf");
-	
 	}
   
 
-.article_container{font-family:"TitilliumWeb-Regular";
+.article_container{
+	font-family:"Titillium";
 	color:#000000;
 	text-align:left;
 	padding-top:20px;
@@ -34,7 +34,7 @@
 	padding-left:10px;
 	}
 
-.plaintext{font-family:"TitilliumWeb-Regular";
+.plaintext{font-family:"Titillium";
 	font-size:18pt;
 	color:#000000;
 	text-align:left;
@@ -45,34 +45,35 @@
 }
 
 
-h2{font-family:"TiilliumWeb-Bold";
+h2{font-family:"Tiillium Bold";
 color:#000000;
 }
 
 h3{color:#000000;}
 
-.title{font-family:"TitilliumWeb-Bold";
+.title{font-family:"Titillium Bold";
 font-size:40pt;
 text-align:left;
 color:#000000;
 letter-spacing: 2pt;}
 .other_letters{font-size:13.5pt;}
-.subtitle{font-family:"TitilliumWeb-Bold";
+.subtitle{font-family:"Titillium Bold";
 font-size:30pt;
 text-align:left;}
 
-.byline{font-family:"TitilliumWeb-SemiBold";
+.byline{font-family:"Titillium SemiBold";
 font-size:16pt;
 text-align:left;
 margin-top: 50px;
 margin-bottom: 50px;}
+
 .publication_date{font-size:16pt;
 text-align:center;
 margin-top: 50px;
 margin-bottom: 50px;
 text-align:left;}
 
-.introduction{font-family:"TitilliumWeb-Regular";
+.introduction{font-family:"Titillium";
 font-size:14pt;
 color:#142740;
 background-color:#F29F05;
@@ -94,12 +95,12 @@ img {
   margin-right: auto;
   width: 100%;
 }
-figcaption{font-family:"TitilliumWeb-Regular";
+figcaption{font-family:"Titillium";
 padding:10px;
 text-align:left;}
 .credit{font-style:italic;}
 
-table{font-family:"TitilliumWeb-Regular"
+table{font-family:"Titillium";
 font-size: 10.5pt;
 border-collapse: collapse;
 text-align: center;
@@ -118,7 +119,7 @@ table td {
 background: #505D8C;
 }
 
-.table-caption{font-family:"TitilliumWeb-Regular";
+.table-caption{font-family:"Titillium";
 }
 
 th, td {
