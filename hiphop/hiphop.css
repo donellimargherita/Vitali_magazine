@@ -1,0 +1,92 @@
+@font-face {
+	font-family:"Digitag" ;
+	src: url("font\Digitag.ttf"); 
+	
+	font-family: "Bungee";
+	src: url("font\Bungee-Regular.ttf");
+	
+	font-family: "degrassi" ;
+	src: url("font\degrassi.ttf");
+	
+	font-family:"Rock Salt";
+	src: url("font\RockSalt-Regular.ttf");
+}
+
+
+.article_container{
+background-image: linear-gradient(to bottom right, red, yellow), url("graffiti-cloud.jpg");
+background-attachment: fixed, fixed;
+background-position:  center, left top;
+background-repeat: no-repeat, no-repeat;
+background-size: ;
+opacity:  0.5, 0.5;
+padding-top:10px;}
+
+.plaintext{font-family:"Rock Salt";
+font-size:12pt;
+color: black}
+
+
+.title{font-family:"degrassi";
+font-size:500%;
+text-align:center;
+color: black;
+letter-spacing: 1 px;}
+.initial_letter{font-family: "degrassi";
+font-size:75pt;}
+.other_letters{font-size:18pt;}
+
+.subtitle{font-family:"Digitag";
+font-size:28pt;
+text-align:center;}
+
+.byline{font-family:"Bungee";
+font-size:16pt;
+text-align:center;
+margin-top: 1px;
+margin-bottom: 1px;}
+.publication_date{font-family:"Bungee";
+font-size:16pt;
+text-align:center;
+margin-top: 1px;
+margin-bottom: 1px;
+text-align:center;}
+
+.introduction{font-family:"Bungee";
+font-size:14pt;
+background-color:}
+
+
+.editor_note{font-family:"Bungee";
+text-align:center;}
+.bio{font-family:"Bungee";
+text-align:center;}
+.copy{font-family:"Rock Salt";
+text-align:center;}
+
+img {filter: saturate(7);
+filter: drop-shadow(8px 8px 10px black);
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+figcaption{font-family:"Bungee";
+padding:10px;
+text-align:center;}
+.credit{font-family:"Bungee";}
+
+table{
+  padding: none;
+}
+table td{border:solid 1px black;
+padding:2px;}
+
+blockquote{font-family:"Rock Salt";
+font-style:italic}
+
+h2 {font-family:"Digitag";
+font-size: 26pt} 
+
+
+

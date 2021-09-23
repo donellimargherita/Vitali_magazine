@@ -1,0 +1,108 @@
+@font-face {
+	font-family:"IM Fell English" ;
+	src: url("font\IMFellEnglish-Italic.ttf"); 
+	
+	font-family: "Old Europe";
+	src: url("font\Old Europe.ttf");
+	
+	font-family: "OldNewspaperTypes" ;
+	src: url("font\OldNewspaperTypes.ttf");
+	
+	font-family:"Romantiques";
+	src: url("font\Romantiques Regular.ttf");
+}
+
+
+.article_container{
+color:black;
+background-image:url("gray_paper.jpg");
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+padding-top:10px;
+overflow: scroll;}
+
+.plaintext{font-family:"OldNewspaperTypes";
+font-size:12pt;
+padding:10px;
+text-align: justify;
+border-top-style: double;
+}
+
+
+.title{font-family:"Romantiques";
+font-size:500%;
+text-align:center;
+color:black;
+letter-spacing: 1 px;}
+.initial_letter{font-family: "Old Europe";
+font-size:75pt;}
+.other_letters{font-size:18pt;}
+
+.subtitle{font-family:"Old Europe";
+font-size:24pt;
+text-align:center;
+padding:10px;}
+
+.byline{font-family:"IM Fell English";
+font-size:16pt;
+text-align:center;
+margin-top: 1px;
+margin-bottom: 1px;}
+.publication_date{font-family:"IM Fell English";
+font-size:16pt;
+text-align:center;
+margin-top: 1px;
+margin-bottom: 1px;
+text-align:center;}
+
+.introduction{font-family:"IM Fell English";
+font-size:14pt;
+background-color:}
+
+
+.editor_note{font-family:"IM Fell English";
+text-align:center;}
+.bio{font-family:"IM Fell English";
+text-align:center;}
+.copy{font-family:"IM Fell English";
+text-align:center;}
+
+img {filter: sepia(100%);
+  display: inline;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+figcaption{font-family:"IM Fell English";
+padding:10px;}
+.credit{font-family:"IM Fell English";}
+
+table{ 
+  border: 40px solid transparent;
+  padding: none;
+  border-image: url(Divider44.png) 152 round;
+}
+table td{border:solid black;
+padding:1px;}
+
+blockquote{font-family:"IM Fell English";
+font-style:italic;
+border:10px solid trasparent;
+}
+
+h2 {font-family:"Old Europe";
+font-size: 20pt;
+text-transform: lowercase;
+border-top-style: double;
+padding: 10px;
+ }
+ h2::first-letter {
+  text-transform: capitalize;
+}
+
+
+
+
+
