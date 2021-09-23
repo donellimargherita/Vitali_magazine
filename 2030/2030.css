@@ -1,42 +1,47 @@
 
-@font-face{font-family: "Titillium_Web";
-    src: url('2030/Fonts/TitilliumWeb-Bold.ttf);}
-
-@font-face{font-family: "Titillium_Web";
-    src: url('2030/Fonts/TitilliumWeb-Regular.ttf');}
-
-@font-face{font-family: "Titillium_Web";
-    src: url('2030/Fonts/TitilliumWeb-Italic.ttf');}
-
-@font-face{font-family: "Titillium_Web";
-    src: url('2030/Fonts/TitilliumWeb-SemiBold.ttf');}
+@font-face{
+	font-family: "TiilliumWeb-Bold";
+    src: url("2030/Fonts/TitilliumWeb-Bold.ttf");
+	
+	font-family: "TitilliumWeb-Regular";
+    src: url("2030/Fonts/TitilliumWeb-Regular.ttf");
+	
+	font-family: "TitilliumWeb-Italic";
+    src: url("2030/Fonts/TitilliumWeb-Italic.ttf");
+	
+	font-family: "TitilliumWeb-SemiBold";
+    src: url("2030/Fonts/TitilliumWeb-SemiBold.ttf");
+	
+	}
   
 
 .article_container{font-family:"TitilliumWeb-Regular";
-color:#000000;
-text-align:left;
-padding-top:20px;
-padding-right:10px;
-padding-left:10px;}
-color:#FFFFFF;
-text-align:left;
-background-color:#C997C3;
-background-attachment: fixed;
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-padding:10px;
-padding-top:20px;
-padding-right:10px;
-padding-left:10px;}
+	color:#000000;
+	text-align:left;
+	padding-top:20px;
+	padding-right:10px;
+	padding-left:10px;
+	color:#FFFFFF;
+	text-align:left;
+	background-color:#C997C3;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding:10px;
+	padding-top:20px;
+	padding-right:10px;
+	padding-left:10px;
+	}
 
 .plaintext{font-family:"TitilliumWeb-Regular";
-font-size:18pt;
-color:#000000;
-text-align:left;
-background-color:#C997C3;
-plaintext.legibility{
-  text-rendering: optimizeLegibility;
+	font-size:18pt;
+	color:#000000;
+	text-align:left;
+	background-color:#C997C3;
+}
+.plaintext{
+  text-rendering: optimizeLegibility;;
 }
 
 
