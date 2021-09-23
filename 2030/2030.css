@@ -53,17 +53,19 @@ text-align:left;
 color:#000000;
 letter-spacing: 2pt;}
 .other_letters{font-size:13.5pt;}
-.subtitle{font-family:"TitilliumWeb-Bold";
+.subtitle{font-family:"Titillium Web";
 font-size:30pt;
 text-align:left;}
 
 .byline{font-family:"Titillium Web";
-font-weight: 300;
+font-weight: normal;
 font-size:16pt;
 text-align:left;
 margin-top: 50px;
 margin-bottom: 50px;}
-.publication_date{font-size:16pt;
+.publication_date{font-family:"Titillium Web";
+font-weight: normal;
+font-size:16pt;
 text-align:center;
 margin-top: 50px;
 margin-bottom: 50px;
