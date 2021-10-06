@@ -20,7 +20,7 @@
 </style>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
 	
-	
+
 	
 	<!-- aggiungo jQuery lib che ho scaricato nella cartella-->
 	<script type="text/javascript" src="jquery-3.6.0.js"> </script>
@@ -28,15 +28,75 @@
 	<script type="text/javascript">
 		$(document).ready(
 			function() {
-				$("#article_1").load("Issue_education/article1/articolo1.html")
-				$("#article_2").load("Issue_education/article2/articolo2.html")
-				$("#article_3").load("Issue_education/article3/articolo3.html")
+				$("#article_1").load("ebook/CovidCons/CovidCons.html")
+				$("#article_2").load("ebook/EbookHistory/EbookHistory.html")
+				$("#article_3").load("ebook/Vox the 2010s/Vox the 2010s.html")
 				});
-	
+				
+				
+		<!-- script per METADATA VIEWER -->
+		function filltabs(){
+			fillInfo("#file", "#info")
+			filltab("#file .aside","list-aside","#asides")
+			filltab("#file q.speech","list-speech","#speeches")
+			filltab("#file q:not(.speech)","list-quote","#quotes")
+		};
+		
+		function fillInfo(from, where) {
+			var item = `
+				<p class="list title"><b>Title:</b>$title</p>
+				<p class="list author"><b>Author: </b> $author</p>
+				<p class="list author"><b>Headings: </b><ul>$headings</ul></p>
+				<p class="list author"><b>Keywords: </b><ul>$keywords</ul></p>			
+				` ;
+			$(where).empty(); 
+
+			var title = $(from + ' h1')[0].innerText
+			var author = $(from + ' .byline')[0].innerText
+			var headingList = $(from + ' h2')
+			var keywordList = $(from + ' meta[name="keywords"]').prop('content').split(', ')
+			var headings = ""
+			var keywords = ""
+			for (var i=0; i<headingList.length; i++) {
+				headings += "<li class='small'>"+headingList[i].innerHTML+"</li>"
+			}
+			for (var i=0; i<keywordList.length; i++) {
+				keywords += "<li class='small'>"+keywordList[i]+"</li>"
+			}
+			$(where).append(item.tpl( {
+				author: author,
+				title: title,
+				headings: headings,
+				keywords: keywords
+			}))
+		}
+		
+		function filltab(what,style,where) {
+			var list = `<li class="list $style"><a href="#" onclick="goto('$place')">$content</a></li>`
+			var elements = $(what); 
+			$(where+' ul').empty(); 
+			for (var i=0; i<elements.length; i++) {
+				$(where+' ul').append(list.tpl({
+					style:style, 
+					place: '#'+elements[i].id,
+					content: elements[i].innerHTML
+				}) )
+			}
+		}
+
+<!-- funzione per control find on animazione-->
+		function goto(id) {
+			var t = $(id)[0].offsetTop;
+			$('body').animate({ scrollTop: t }, 200);
+			$(id).addClass('animate');
+			setTimeout(function(){
+				$(id).removeClass('animate');
+			},5000);
+		}
+		
 	</script>
   </head>
   <body>
-  <div class="table-responsive" style="overflow-y: hidden">
     <!--Header part, that has to be in all the pages: title of the mag + menu navbar -->
     <header>
     <h1>Magazine Name</h1>
@@ -157,7 +217,26 @@
 						<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 				</div>
 				<div class="offcanvas-body">
-					contenuto metadata
+					<ul class="nav nav-tabs">
+					  <li class="nav-item">
+						<a class="nav-link"  id="info-tab" href="#info">Info</a>
+					  </li>
+					  <li class="nav-item">
+						<a class="nav-link" id="person-tab"href="#person">Person</a>
+					  </li>
+					  <li class="nav-item">
+						<a class="nav-link" id="place-tab"href="#place">Place</a>
+					  </li>
+					  <li class="nav-item">
+						<a class="nav-link" id="organisation-tab"href="#organisation">Organisation</a>
+					  </li>
+					  <li class="nav-item">
+						<a class="nav-link" id="concept-tab"href="#concept">Concept</a>
+					  </li>
+					  <li class="nav-item">
+						<a class="nav-link" id="info-tool"href="#tool">Tool</a>
+					  </li>
+					</ul>
 				</div>
 			</div>
 		</div>
@@ -173,25 +252,25 @@
 <div id="space">
 </div>
     <!--layout of the visualisation interface: Nesting grids from Bootstrap -->
-    <div class="container" >
+    <div class="container">
       <div class="row align-items-start">    
 
             <!-- article columns: 1st column for an article -->
             <div class="col-6 col-md-4">
               <div class="p-3 border bg-light" >
-				<div class="overflow-auto" id="article_1"></div>
+				<div id="article_1"></div>
             </div>
 			</div>
             <!-- article columns: 2nd column for an article -->
             <div class="col-6 col-md-4">
-              <div class="p-3 border bg-light"> 
-                 <div class="overflow-auto" id="article_2"></div>
+              <div class="p-3 border bg-light" > 
+                 <div id="article_2"></div>
               </div>
             </div>
 			<!-- article columns: 3rd column for an article -->
             <div class="col-6 col-md-4">
-              <div class="p-3 border bg-light"> 
-                 <div class="overflow-auto" id="article_3"></div>
+              <div class="p-3 border bg-light" > 
+                 <div id="article_3"></div>
               </div>
             </div>
           </div>
