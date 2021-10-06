@@ -1,56 +1,45 @@
+//Change style through buttons
+function changeStyle(selectedStyle) {
+    document.getElementById('ArticleCss').remove();
+    document.getElementById('loading').style.display = 'block';
+    cssFile = document.createElement('link');
+    cssFile.type = "text/css"; 
+    cssFile.rel = "stylesheet";
+    cssFile.onload = function(){ setTimeout(function() {document.getElementById('loading').style.display = 'none';}, 2400) };
+    cssFile.href = selectedStyle;
+    cssFile.id= "ArticleCss";
+    document.getElementsByTagName("head")[0].appendChild(cssFile);
+}
+
+//Manage active style button
 $(document).ready(function(){
- 		$(".styles").click(function(){
- 			style = this.id;
- 			switch(style){
- 				case "reset":
-					  	$('link[rel="stylesheet alternative"]').attr('disabled', 'true');
-					  	$('link[href="../Assets/css/main.css"]').removeAttr('disabled');
-	  					$("#nightview").attr("class", "");
-	  					break;
-	  			case "soviet":
-	  					$('link[rel="stylesheet alternative"]').attr('disabled', 'true');
-	  					$('link[href="../Assets/css/main.css"]').attr('disabled', 'true');
-					  	$('link[href="../Assets/css/main_cambiato.css"]').removeAttr('disabled');
-					  	$('link[href="../Assets/css/soviet.css"]').removeAttr('disabled');
-					  	$("#nightview").attr("class", "");
-					  	break;
-				case "future":
-						$('link[rel="stylesheet alternative"]').attr('disabled', 'true');
-	  					$('link[href="../Assets/css/main.css"]').attr('disabled', 'true');
-					  	$('link[href="../Assets/css/main_cambiato.css"]').removeAttr('disabled');
-						$('link[href="../Assets/css/hyperfuture.css"]').removeAttr('disabled');
-						$("#nightview").attr("class", "fas fa-moon");
-						break;
-				case "victorian":
-						$('link[rel="stylesheet alternative"]').attr('disabled', 'true');
-						$('link[href="../Assets/css/main.css"]').attr('disabled', 'true');
-					  	$('link[href="../Assets/css/main_cambiato.css"]').removeAttr('disabled');
-						$('link[href="../Assets/css/victorian.css"]').removeAttr('disabled');
-						$("#nightview").attr("class", "");
-						break;
-				case "trashy90":
-						$('link[rel="stylesheet alternative"]').attr('disabled', 'true');
-	  					$('link[href="../Assets/css/main.css"]').attr('disabled', 'true');
-					  	$('link[href="../Assets/css/main_cambiato.css"]').removeAttr('disabled');
-						$('link[href="../Assets/css/trashy90s.css"]').removeAttr('disabled');
-						$("#nightview").attr("class", "");
-						break;
-				case "beasty_medieval":
-						$('link[rel="stylesheet alternative"]').attr('disabled', 'true');
-	  					$('link[href="../Assets/css/main.css"]').attr('disabled', 'true');
-					  	$('link[href="../Assets/css/main_cambiato.css"]').removeAttr('disabled');
-						$('link[href="../Assets/css/beasty_medieval.css"]').removeAttr('disabled');
-						$("#nightview").attr("class", "");
-						break;
-				case "groovy70s":
-						$('link[rel="stylesheet alternative"]').attr('disabled', 'true');
-	  					$('link[href="../Assets/css/main.css"]').attr('disabled', 'true');
-					  	$('link[href="../Assets/css/main_cambiato.css"]').removeAttr('disabled');
-						$('link[href="../Assets/css/groovy70s.css"]').removeAttr('disabled');
-						$("#nightview").attr("class", "");
-						break;
-				default: 
-						console.log("ti prego non comparire");
- 					}
-		}); 
+
+    $("#reset").click(function(){
+        $('#btn-style>button.btn-active').removeClass("btn-active");
+        this.classList.add("btn-active");
+  });
+    $("#aldine").click(function(){
+        $('#btn-style>button.btn-active').removeClass("btn-active");
+        this.classList.add("btn-active");
+  });
+    $("#hiphop").click(function(){
+        $('#btn-style>button.btn-active').removeClass("btn-active");
+        this.classList.add("btn-active");
+  });
+    $("#cubism").click(function(){
+        $('#btn-style>button.btn-active').removeClass("btn-active");
+        this.classList.add("btn-active");
+  });
+    $("#hippie").click(function(){
+        $('#btn-style>button.btn-active').removeClass("btn-active");
+        this.classList.add("btn-active");
+  });
+    $("#victorian").click(function(){
+        $('#btn-style>button.btn-active').removeClass("btn-active");
+        this.classList.add("btn-active");
+  });
+    $("#accessible").click(function(){
+        $('#btn-style>button.btn-active').removeClass("btn-active");
+        this.classList.add("btn-active");
+  });
 });
