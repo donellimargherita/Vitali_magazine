@@ -1,11 +1,12 @@
+Element.prototype.remove = function() {
+this.parentElement.removeChild(this);
+}
 //Change style through buttons
 function changeStyle(selectedStyle) {
     document.getElementById('ArticleCss').remove();
-    document.getElementById('loading').style.display = 'block';
     cssFile = document.createElement('link');
     cssFile.type = "text/css"; 
     cssFile.rel = "stylesheet";
-    cssFile.onload = function(){ setTimeout(function() {document.getElementById('loading').style.display = 'none';}, 2400) };
     cssFile.href = selectedStyle;
     cssFile.id= "ArticleCss";
     document.getElementsByTagName("head")[0].appendChild(cssFile);
