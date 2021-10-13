@@ -84,7 +84,7 @@ $(document).ready(function(){
 });
 	</script>				
 	<script>			
-		<!-- script per METADATA VIEWER -->
+		//script per METADATA VIEWER 
 		function filltabs(){
 			fillInfo("#article_1", "#info")
 			//filltab("#file .aside","list-aside","#asides")
@@ -95,7 +95,7 @@ $(document).ready(function(){
 		function fillInfo(from, where) {
 			var item = `
 				<p class="list title"><b>Title:</b>$title</p>
-				<p class="list author"><b>Author: </b> $author</p>			
+				<p class="list author"><b>Author:</b>$author</p>			
 				` ;
 			$(where).empty(); 
 
@@ -109,7 +109,7 @@ $(document).ready(function(){
 		};
 		
 
-<!-- funzione per control find on animazione-->
+//funzione per control find on animazione
 		function goto(id) {
 			var t = $(id)[0].offsetTop;
 			$('body').animate({ scrollTop: t }, 200);
