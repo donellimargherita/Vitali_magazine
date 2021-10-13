@@ -85,58 +85,33 @@ $(document).ready(function(){
   });
 });
 	</script>
-		<script>			
-		<!-- script per METADATA VIEWER -->
+	<script>			
+		//script per METADATA VIEWER 
 		function filltabs(){
-			fillInfo("#file", "#info")
-			filltab("#file .aside","list-aside","#asides")
-			filltab("#file q.speech","list-speech","#speeches")
-			filltab("#file q:not(.speech)","list-quote","#quotes")
+			fillInfo("#article_1", "#info")
+			//filltab("#file .aside","list-aside","#asides")
+			//filltab("#file q.speech","list-speech","#speeches")
+			//filltab("#file q:not(.speech)","list-quote","#quotes")
 		};
 		
 		function fillInfo(from, where) {
 			var item = `
 				<p class="list title"><b>Title:</b>$title</p>
-				<p class="list author"><b>Author: </b> $author</p>
-				<p class="list author"><b>Headings: </b><ul>$headings</ul></p>
-				<p class="list author"><b>Keywords: </b><ul>$keywords</ul></p>			
+				<p class="list author"><b>Author:</b>$author</p>			
 				` ;
 			$(where).empty(); 
 
-			var title = $(from + ' h1')[0].innerText
+			var title = $(from + ' .title')[0].innerText
 			var author = $(from + ' .byline')[0].innerText
-			var headingList = $(from + ' h2')
-			var keywordList = $(from + ' meta[name="keywords"]').prop('content').split(', ')
-			var headings = ""
-			var keywords = ""
-			for (var i=0; i<headingList.length; i++) {
-				headings += "<li class='small'>"+headingList[i].innerHTML+"</li>"
-			}
-			for (var i=0; i<keywordList.length; i++) {
-				keywords += "<li class='small'>"+keywordList[i]+"</li>"
-			}
+			
 			$(where).append(item.tpl( {
 				author: author,
 				title: title,
-				headings: headings,
-				keywords: keywords
-			}))
-		}
+			}));
+		};
 		
-		function filltab(what,style,where) {
-			var list = `<li class="list $style"><a href="#" onclick="goto('$place')">$content</a></li>`
-			var elements = $(what); 
-			$(where+' ul').empty(); 
-			for (var i=0; i<elements.length; i++) {
-				$(where+' ul').append(list.tpl({
-					style:style, 
-					place: '#'+elements[i].id,
-					content: elements[i].innerHTML
-				}) )
-			}
-		}
 
-<!-- funzione per control find on animazione-->
+//funzione per control find on animazione
 		function goto(id) {
 			var t = $(id)[0].offsetTop;
 			$('body').animate({ scrollTop: t }, 200);
@@ -266,17 +241,58 @@ $(document).ready(function(){
 		<div  id="metadata_viewer">
 			<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Metadata viewer</button>
 
-			<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+			<div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
 				<div class="offcanvas-header">
 					<h5 id="offcanvasRightLabel">Metadata viewer</h5>
 						<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 				</div>
 				<div class="offcanvas-body">
-					contenuto metadata
+				<!---tab---!>
+					<ul class="nav nav-tabs">
+					  <li class="nav-item">
+						<a class="nav-link" id="info-tab" data-toggle="tab" href="#info" role="tab" aria-controls="view" aria-selected="false">Info</a>
+					  </li>
+					  <li class="nav-item">
+						<a class="nav-link" id="person-tab" data-toggle="tab" href="#person" role="tab" aria-controls="view" aria-selected="false">Person</a>
+					  </li>
+					  <li class="nav-item">
+						<a class="nav-link" id="place-tab" data-toggle="tab" href="#place" role="tab" aria-controls="view" aria-selected="false">Place</a>
+					  </li>
+					  <li class="nav-item">
+						<a class="nav-link" id="organisation-tab" data-toggle="tab" href="#organisation" role="tab" aria-controls="view" aria-selected="false">Organisation</a>
+					  </li>
+					  <li class="nav-item">
+						<a class="nav-link" id="concept-tab" data-toggle="tab" href="#concept" role="tab" aria-controls="view" aria-selected="false">Concept</a>
+					  </li>
+					  <li class="nav-item">
+						<a class="nav-link" id="info-tool" data-toggle="tab" href="#tool" role="tab" aria-controls="view" aria-selected="false">Tool</a>
+					  </li>
+					</ul>
+					<!---Tab panes--->
+					<div class="tab-content">
+							<div class="tab-pane active myBorder myBorder-notop" id="info" role="tabpanel" aria-labelledby="info-tab">
+							</div>
+							<div class="tab-pane myBorder myBorder-notop" id="person" role="tabpanel" aria-labelledby="asides-tab">
+								<ul class="minimal"></ul>
+							</div>
+							<div class="tab-pane myBorder myBorder-notop" id="place" role="tabpanel" aria-labelledby="speeches-tab">
+								<ul class="minimal"></ul>
+							</div>
+							<div class="tab-pane myBorder myBorder-notop" id="organisation" role="tabpanel" aria-labelledby="quotes-tab">
+								<ul class="minimal"></ul>
+							</div>
+							<div class="tab-pane myBorder myBorder-notop" id="concept" role="tabpanel" aria-labelledby="quotes-tab">
+								<ul class="minimal"></ul>
+							</div>
+							<div class="tab-pane myBorder myBorder-notop" id="tool" role="tabpanel" aria-labelledby="quotes-tab">
+								<ul class="minimal"></ul>
+							</div>
+						</div>
 				</div>
 			</div>
 		</div>
 		</div>
+		
 	
 
 
