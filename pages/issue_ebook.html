@@ -86,7 +86,7 @@ $(document).ready(function(){
 	<script>			
 		<!-- script per METADATA VIEWER -->
 		function filltabs(){
-			fillInfo("#article_1", "#info-tab")
+			fillInfo("#article_1", "#info")
 			//filltab("#file .aside","list-aside","#asides")
 			//filltab("#file q.speech","list-speech","#speeches")
 			//filltab("#file q:not(.speech)","list-quote","#quotes")
@@ -243,26 +243,47 @@ $(document).ready(function(){
 						<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 				</div>
 				<div class="offcanvas-body">
+				<!---tab---!>
 					<ul class="nav nav-tabs">
 					  <li class="nav-item">
 						<a class="nav-link" id="info-tab" data-toggle="tab" href="#info" role="tab" aria-controls="view" aria-selected="false">Info</a>
 					  </li>
 					  <li class="nav-item">
-						<a class="nav-link" id="person-tab" href="#person">Person</a>
+						<a class="nav-link" id="person-tab" data-toggle="tab" href="#person" role="tab" aria-controls="view" aria-selected="false">Person</a>
 					  </li>
 					  <li class="nav-item">
-						<a class="nav-link" id="place-tab" href="#place">Place</a>
+						<a class="nav-link" id="place-tab" data-toggle="tab" href="#place" role="tab" aria-controls="view" aria-selected="false">Place</a>
 					  </li>
 					  <li class="nav-item">
-						<a class="nav-link" id="organisation-tab" href="#organisation">Organisation</a>
+						<a class="nav-link" id="organisation-tab" data-toggle="tab" href="#organisation" role="tab" aria-controls="view" aria-selected="false">Organisation</a>
 					  </li>
 					  <li class="nav-item">
-						<a class="nav-link" id="concept-tab" href="#concept">Concept</a>
+						<a class="nav-link" id="concept-tab" data-toggle="tab" href="#concept" role="tab" aria-controls="view" aria-selected="false">Concept</a>
 					  </li>
 					  <li class="nav-item">
-						<a class="nav-link" id="info-tool" href="#tool">Tool</a>
+						<a class="nav-link" id="info-tool" data-toggle="tab" href="#tool" role="tab" aria-controls="view" aria-selected="false">Tool</a>
 					  </li>
 					</ul>
+					<!---Tab panes--->
+					<div class="tab-content">
+							<div class="tab-pane active myBorder myBorder-notop" id="info" role="tabpanel" aria-labelledby="info-tab">
+							</div>
+							<div class="tab-pane myBorder myBorder-notop" id="person" role="tabpanel" aria-labelledby="asides-tab">
+								<ul class="minimal"></ul>
+							</div>
+							<div class="tab-pane myBorder myBorder-notop" id="place" role="tabpanel" aria-labelledby="speeches-tab">
+								<ul class="minimal"></ul>
+							</div>
+							<div class="tab-pane myBorder myBorder-notop" id="organisation" role="tabpanel" aria-labelledby="quotes-tab">
+								<ul class="minimal"></ul>
+							</div>
+							<div class="tab-pane myBorder myBorder-notop" id="concept" role="tabpanel" aria-labelledby="quotes-tab">
+								<ul class="minimal"></ul>
+							</div>
+							<div class="tab-pane myBorder myBorder-notop" id="tool" role="tabpanel" aria-labelledby="quotes-tab">
+								<ul class="minimal"></ul>
+							</div>
+						</div>
 				</div>
 			</div>
 		</div>
