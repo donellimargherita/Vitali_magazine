@@ -21,7 +21,10 @@
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	}
+	max-height:700px;
+	overflow-y:scroll;
+	width: 100%;
+	margin: auto;}
 
 .plaintext{font-family:"Bookends";
 	font-weight: normal;
