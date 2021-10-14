@@ -262,63 +262,63 @@ $(document).ready(function(){
 			</div>
 		<!-- bottone per MDV offcanvas-->
 		<div  id="metadata_viewer">
-				<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Metadata viewer</button>
+				<!--- codice di bootstrap offc. bottom-->
+<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Metadata viewer</button>
 
-				<div class="offcanvas offcanvas-top" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
-					<div class="offcanvas-header">
-						<h5 id="offcanvasTopLabel">Metadata viewer</h5>
-							<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-					</div>
-					<div class="offcanvas-body">
-					<!---tab--->
-						<ul class="nav nav-tabs">
-						  <li class="nav-item">
-							<a class="nav-link" id="info-tab" data-toggle="tab" href="#info" role="tab" aria-controls="view" aria-selected="false">Info</a>
-						  </li>
-						  <li class="nav-item">
-							<a class="nav-link" id="person-tab" data-toggle="tab" href="#person" role="tab" aria-controls="view" aria-selected="false">Person</a>
-						  </li>
-						  <li class="nav-item">
-							<a class="nav-link" id="place-tab" data-toggle="tab" href="#place" role="tab" aria-controls="view" aria-selected="false">Place</a>
-						  </li>
-						  <li class="nav-item">
-							<a class="nav-link" id="organisation-tab" data-toggle="tab" href="#organisation" role="tab" aria-controls="view" aria-selected="false">Organisation</a>
-						  </li>
-						  <li class="nav-item">
-							<a class="nav-link" id="concept-tab" data-toggle="tab" href="#concept" role="tab" aria-controls="view" aria-selected="false">Concept</a>
-						  </li>
-						  <li class="nav-item">
-							<a class="nav-link" id="info-tool" data-toggle="tab" href="#tool" role="tab" aria-controls="view" aria-selected="false">Tool</a>
-						  </li>
-						</ul>
-						<!---Tab panes--->
-						<div class="tab-content">
-							<div class="tab-pane active myBorder myBorder-notop" id="info" role="tabpanel" aria-labelledby="info-tab">
-							</div>
-							<div class="tab-pane myBorder myBorder-notop" id="person" role="tabpanel" aria-labelledby="asides-tab">
-								<ul class="minimal"></ul>
-							</div>
-							<div class="tab-pane myBorder myBorder-notop" id="place" role="tabpanel" aria-labelledby="speeches-tab">
-								<ul class="minimal"></ul>
-							</div>
-							<div class="tab-pane myBorder myBorder-notop" id="organisation" role="tabpanel" aria-labelledby="quotes-tab">
-								<ul class="minimal"></ul>
-							</div>
-							<div class="tab-pane myBorder myBorder-notop" id="concept" role="tabpanel" aria-labelledby="quotes-tab">
-								<ul class="minimal"></ul>
-							</div>
-							<div class="tab-pane myBorder myBorder-notop" id="tool" role="tabpanel" aria-labelledby="quotes-tab">
-								<ul class="minimal"></ul>
-							</div>
-						</div>
-					</div>
-				</div>
+<div class="offcanvas offcanvas-bottom" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasBottomLabel">Metadata viewer</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body small">
+		<!---tab--->
+		<ul class="nav nav-tabs">
+			<li class="nav-item">
+				<a class="nav-link" id="info-tab" data-toggle="tab" href="#info" role="tab" aria-controls="view" aria-selected="false">Info</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" id="person-tab" data-toggle="tab" href="#person" role="tab" aria-controls="view" aria-selected="false">Person</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" id="place-tab" data-toggle="tab" href="#place" role="tab" aria-controls="view" aria-selected="false">Place</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" id="organisation-tab" data-toggle="tab" href="#organisation" role="tab" aria-controls="view" aria-selected="false">Organisation</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" id="concept-tab" data-toggle="tab" href="#concept" role="tab" aria-controls="view" aria-selected="false">Concept</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" id="info-tool" data-toggle="tab" href="#tool" role="tab" aria-controls="view" aria-selected="false">Tool</a>
+			</li>
+		</ul>
+		<!---Tab panes--->
+		<div class="tab-content">
+			<div class="tab-pane active myBorder myBorder-notop" id="info" role="tabpanel" aria-labelledby="info-tab">
+			</div>
+			<div class="tab-pane myBorder myBorder-notop" id="person" role="tabpanel" aria-labelledby="asides-tab">
+				<ul class="minimal"></ul>
+			</div>
+			<div class="tab-pane myBorder myBorder-notop" id="place" role="tabpanel" aria-labelledby="speeches-tab">
+				<ul class="minimal"></ul>
+			</div>
+			<div class="tab-pane myBorder myBorder-notop" id="organisation" role="tabpanel" aria-labelledby="quotes-tab">
+				<ul class="minimal"></ul>
+			</div>
+			<div class="tab-pane myBorder myBorder-notop" id="concept" role="tabpanel" aria-labelledby="quotes-tab">
+				<ul class="minimal"></ul>
+			</div>
+			<div class="tab-pane myBorder myBorder-notop" id="tool" role="tabpanel" aria-labelledby="quotes-tab">
+				<ul class="minimal"></ul>
 			</div>
 		</div>
-	
+	</div>
+	</div>
+</div>
+</div>
 
 
-    </header>
+		</header>
 
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
