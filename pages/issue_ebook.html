@@ -241,16 +241,16 @@ $(document).ready(function(){
 				<div class="offcanvas offcanvas-top" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel"> ---> 
 				
 				<!--- provo a usare il codice di bootstrap offc. top-->
-				<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Toggle top offcanvas</button>
+<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Toggle top offcanvas</button>
 
-				<div class="offcanvas offcanvas-top"  data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
-					<!--- il mio offc. viewer --->
-					<div class="offcanvas-header">
-						<h5 id="offcanvasTopLabel">Metadata viewer</h5>
-							<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-					</div>
-					<div class="offcanvas-body">
-					<!---tab--->
+<div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+  <div class="offcanvas-header">
+    <h5 id="offcanvasTopLabel">Offcanvas top</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+	</div>
+  	<div class="offcanvas-body">
+
+						<!---tab--->
 						<ul class="nav nav-tabs">
 						  <li class="nav-item">
 							<a class="nav-link" id="info-tab" data-toggle="tab" href="#info" role="tab" aria-controls="view" aria-selected="false">Info</a>
@@ -271,6 +271,8 @@ $(document).ready(function(){
 							<a class="nav-link" id="info-tool" data-toggle="tab" href="#tool" role="tab" aria-controls="view" aria-selected="false">Tool</a>
 						  </li>
 						</ul>
+		</div>
+	</div>
 						<!---Tab panes--->
 						<div class="tab-content">
 							<div class="tab-pane active myBorder myBorder-notop" id="info" role="tabpanel" aria-labelledby="info-tab">
