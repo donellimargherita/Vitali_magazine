@@ -2,8 +2,9 @@
 @font-face{
 	font-family: "Mainsain Font";
     src: url("hippie/Fonts/mainsain-font 2/Mainsan.ttf");
+    }
 	
-	font-family: "Bookends";
+@font-face{font-family: "Bookends";
     src: url("hippie/Fonts/bookends/Bookends-BookendsWithAccents.otf");
 	}
   
