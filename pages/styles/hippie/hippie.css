@@ -38,7 +38,9 @@ font-weight: bold;
 color:#DE7709;
 }
 
-h3{color:#DE7709;}
+h3{font-family:"Mainsain Font";
+color:#DE7709;
+}
 
 .title{font-family:"Mainsain Font";
 font-weight:bold;
