@@ -87,6 +87,14 @@ $(document).ready(function(){
 	</script>
 	<script>			
 		//script per METADATA VIEWER 
+		String.prototype.tpl = function(o) { 
+			var r = this ; 
+			for (var i in o) { 
+				r = r.replace(new RegExp("\\$"+i, 'g'),o[i])  
+			} 
+			return r 
+		}
+
 		function filltabs(){
 			fillInfo("#article_1", "#info")
 			//filltab("#file .aside","list-aside","#asides")
@@ -251,22 +259,22 @@ $(document).ready(function(){
 		<!---tab--->
 		<ul class="nav nav-tabs">
 			<li class="nav-item">
-				<a class="nav-link" id="info-tab" data-toggle="tab" href="#info" role="tab" aria-controls="view" aria-selected="false">Info</a>
+				<a class="nav-link active" id="info-tab" data-toggle="tab" href="#info" role="tab" aria-controls="view" aria-selected="false">Info</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" id="person-tab" data-toggle="tab" href="#person" role="tab" aria-controls="view" aria-selected="false">Person</a>
+				<a class="nav-link active" id="person-tab" data-toggle="tab" href="#person" role="tab" aria-controls="view" aria-selected="false">Person</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" id="place-tab" data-toggle="tab" href="#place" role="tab" aria-controls="view" aria-selected="false">Place</a>
+				<a class="nav-link active" id="place-tab" data-toggle="tab" href="#place" role="tab" aria-controls="view" aria-selected="false">Place</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" id="organisation-tab" data-toggle="tab" href="#organisation" role="tab" aria-controls="view" aria-selected="false">Organisation</a>
+				<a class="nav-link active" id="organisation-tab" data-toggle="tab" href="#organisation" role="tab" aria-controls="view" aria-selected="false">Organisation</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" id="concept-tab" data-toggle="tab" href="#concept" role="tab" aria-controls="view" aria-selected="false">Concept</a>
+				<a class="nav-link active" id="concept-tab" data-toggle="tab" href="#concept" role="tab" aria-controls="view" aria-selected="false">Concept</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" id="info-tool" data-toggle="tab" href="#tool" role="tab" aria-controls="view" aria-selected="false">Tool</a>
+				<a class="nav-link active" id="info-tool" data-toggle="tab" href="#tool" role="tab" aria-controls="view" aria-selected="false">Tool</a>
 			</li>
 		</ul>
 		<!---Tab panes--->
