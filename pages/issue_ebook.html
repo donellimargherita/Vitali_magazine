@@ -370,49 +370,22 @@ $(document).ready(function(){
     <!--layout of the visualisation interface: Nesting grids from Bootstrap -->
     <div class="container">
 	<!--provo a mettere qui i metadata-->
-		<div> <!---metadata tabs--->
-		<ul class="nav nav-tabs">
-			<li class="nav-item">
-				<a class="nav-link" id="info-tab" data-toggle="tab" href="#info" role="tab" aria-controls="view" aria-selected="false">Info</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" id="person-tab" data-toggle="tab" href="#person" role="tab" aria-controls="view" aria-selected="false">Person</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" id="place-tab" data-toggle="tab" href="#place" role="tab" aria-controls="view" aria-selected="false">Place</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" id="organisation-tab" data-toggle="tab" href="#organisation" role="tab" aria-controls="view" aria-selected="false">Organisation</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" id="concept-tab" data-toggle="tab" href="#concept" role="tab" aria-controls="view" aria-selected="false">Concept</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" id="info-tool" data-toggle="tab" href="#tool" role="tab" aria-controls="view" aria-selected="false">Tool</a>
-			</li>
-		</ul>
-		<!---Tab panes--->
-		<div class="tab-content" id="SentenceContent">
-			<div class="tab-pane active myBorder myBorder-notop" id="info" role="tabpanel" aria-labelledby="info-tab">
+	<div class="container">
+		<div class="row align-items-start">
+			<div class="col">
+				Info
+				<p id="info">qualcosa?</p>	
 			</div>
-			<div class="tab-pane myBorder myBorder-notop" id="person" role="tabpanel" aria-labelledby="asides-tab">
-				<p>
-				Puoi venire fuori??
-				</p>
+			<div class="col">
+				Person
+				<p id="person"></p>
 			</div>
-			<div class="tab-pane myBorder myBorder-notop" id="place" role="tabpanel" aria-labelledby="speeches-tab">
-				<ul class="minimal"></ul>
-			</div>
-			<div class="tab-pane myBorder myBorder-notop" id="organisation" role="tabpanel" aria-labelledby="quotes-tab">
-				<ul class="minimal"></ul>
-			</div>
-			<div class="tab-pane myBorder myBorder-notop" id="concept" role="tabpanel" aria-labelledby="quotes-tab">
-				<ul class="minimal"></ul>
-			</div>
-			<div class="tab-pane myBorder myBorder-notop" id="tool" role="tabpanel" aria-labelledby="quotes-tab">
-				<ul class="minimal"></ul>
+			<div class="col">
+				Place
+				<p id="place"></p>
 			</div>
 		</div>
+
 	<!--inizio delle tre colonne per gli articoli-->
       <div class="row align-items-start">    
 
