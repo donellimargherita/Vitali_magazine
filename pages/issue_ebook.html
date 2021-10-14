@@ -87,7 +87,7 @@ $(document).ready(function(){
 		//script per METADATA VIEWER 
 		function filltabs(){
 			fillInfo("#article_1", "#info")
-			//filltab("#file .aside","list-aside","#asides")
+			filltab("#article_1. mention-person","list-person","#person")
 			//filltab("#file q.speech","list-speech","#speeches")
 			//filltab("#file q:not(.speech)","list-quote","#quotes")
 		};
@@ -108,8 +108,21 @@ $(document).ready(function(){
 			}));
 		};
 		
-
-//funzione per control find on animazione
+		function filltab(what,style,where) {
+			var list = `<li class="list $style"><a href="#" onclick="goto('$place')">$content</a></li>`
+			var elements = $(what); 
+			$(where+' ul').empty(); 
+			for (var i=0; i<elements.length; i++) {
+				$(where+' ul').append(list.tpl({
+					style:style, 
+					place: '#'+elements[i].id,
+					content: elements[i].innerHTML
+				}) )
+			}
+		}
+		
+	</script>
+<!---funzione per control find on animazione
 		function goto(id) {
 			var t = $(id)[0].offsetTop;
 			$('body').animate({ scrollTop: t }, 200);
@@ -117,9 +130,9 @@ $(document).ready(function(){
 			setTimeout(function(){
 				$(id).removeClass('animate');
 			},5000);
-		}
+		}---> 
 		
-	</script>
+	
   </head>
   <body>
 	<div class="table-responsive" style="overflow-y: hidden">
