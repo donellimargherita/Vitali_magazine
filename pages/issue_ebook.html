@@ -85,30 +85,6 @@ $(document).ready(function(){
 	</script>				
 	<script>			
 		//script per METADATA VIEWER 
-		String.prototype.tpl = function(o) { 
-			var r = this ; 
-			for (var i in o) { 
-				r = r.replace(new RegExp("\\$"+i, 'g'),o[i])  
-			} 
-			return r 
-		}
-		var listItemTpl = `<li><a href='#' onclick='load("$url")'>$label</a></li>`
-		
-		$(document).ready(main);
-
-		function main() {
-			$.ajax({
-				method: 'GET',
-				url: 'ebook_filelist.json',
-				success: function(d) {
-					for (var i=0; i<d.length; i++) {
-						$('#list').append(listItemTpl.tpl({url:d[i].url, label: d[i].label}))
-					}	
-				},
-				error: function() {
-					alert('No document to show')
-				}
-			});
 			
 		function filltabs(){
 			fillInfo("#article_1", "#info")
@@ -147,7 +123,7 @@ $(document).ready(function(){
 		}
 		
 	</script>
-<!---funzione per control find on animazione
+<!---funzione per control find on animazione--->
 		function goto(id) {
 			var t = $(id)[0].offsetTop;
 			$('body').animate({ scrollTop: t }, 200);
@@ -155,7 +131,7 @@ $(document).ready(function(){
 			setTimeout(function(){
 				$(id).removeClass('animate');
 			},5000);
-		}---> 
+		} 
 		
 	
   </head>
