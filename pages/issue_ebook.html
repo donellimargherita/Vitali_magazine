@@ -94,10 +94,8 @@ $(document).ready(function(){
 		};
 		
 		function fillInfo(from, where) {
-			var item = `
-				<p class="list title"><b>Title:</b>$title</p>
-				<p class="list author"><b>Author:</b>$author</p>			
-				` ;
+			var item = 
+				"<p class="list title"><b>Title:</b>$title</p> <p class="list author"><b>Author:</b>$author</p>"		
 			$(where).empty(); 
 
 			var title = $(from + ' .title')[0].innerText
@@ -110,7 +108,7 @@ $(document).ready(function(){
 		};
 		
 		function filltab(what,style,where) {
-			var list = `<li class="list $style"><a href="#" onclick="goto('$place')">$content</a></li>`
+			var list = "<li class="list $style"><a href="#" onclick="goto('$place')">$content</a></li>"
 			var elements = $(what); 
 			$(where+' ul').empty(); 
 			for (var i=0; i<elements.length; i++) {
@@ -122,7 +120,7 @@ $(document).ready(function(){
 			}
 		}
 		
-	</script>
+	
 <!---funzione per control find on animazione--->
 		function goto(id) {
 			var t = $(id)[0].offsetTop;
@@ -132,7 +130,7 @@ $(document).ready(function(){
 				$(id).removeClass('animate');
 			},5000);
 		} 
-		
+	</script>	
 	
   </head>
   <body>
