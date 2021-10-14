@@ -23,7 +23,11 @@ background-position:  center, left top;
 background-repeat: no-repeat, no-repeat;
 background-size: ;
 opacity:  0.5, 0.5;
-padding-top:10px;}
+padding-top:10px;
+max-height:700px;
+overflow-y:scroll;
+width: 100%;
+margin: auto;}
 
 .plaintext{font-family:"Rock Salt";
 font-size:12pt;
