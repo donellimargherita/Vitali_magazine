@@ -129,16 +129,6 @@ th, td {
   padding: 8px;
 }
 
-a:link { 
-color:#0066cc
-}
-a:visited {
-color:#551a8b
-}
-a:hover{
-color:#003366
-}
-
 .youtube-container { 
 display: block; 
 margin: 20px auto; 
