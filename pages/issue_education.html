@@ -94,10 +94,27 @@ $(document).ready(function(){
 			} 
 			return r 
 		}
+		var listItemTpl = `<li><a href='#' onclick='load("$url")'>$label</a></li>`
+		
+		$(document).ready(main);
 
+		function main() {
+			$.ajax({
+				method: 'GET',
+				url: 'education_filelist.json',
+				success: function(d) {
+					for (var i=0; i<d.length; i++) {
+						$('#list').append(listItemTpl.tpl({url:d[i].url, label: d[i].label}))
+					}	
+				},
+				error: function() {
+					alert('No document to show')
+				}
+			});
+			
 		function filltabs(){
 			fillInfo("#article_1", "#info")
-			//filltab("#file .aside","list-aside","#asides")
+			filltab("#article_1. mention-person","list-person","#person")
 			//filltab("#file q.speech","list-speech","#speeches")
 			//filltab("#file q:not(.speech)","list-quote","#quotes")
 		};
@@ -118,6 +135,21 @@ $(document).ready(function(){
 			}));
 		};
 		
+		function filltab(what,style,where) {
+			var list = `<li class="list $style"><a href="#" onclick="goto('$place')">$content</a></li>`
+			var elements = $(what); 
+			$(where+' ul').empty(); 
+			for (var i=0; i<elements.length; i++) {
+				$(where+' ul').append(list.tpl({
+					style:style, 
+					place: '#'+elements[i].id,
+					content: elements[i].innerHTML
+				}) )
+			}
+		}
+		
+	</script>
+		
 
 //funzione per control find on animazione
 		function goto(id) {
@@ -128,8 +160,6 @@ $(document).ready(function(){
 				$(id).removeClass('animate');
 			},5000);
 		}
-		
-	</script>
 </head>
   
   <body>
