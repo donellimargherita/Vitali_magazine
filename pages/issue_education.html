@@ -96,7 +96,12 @@ $(document).ready(function(){
 		}
 		var listItemTpl = `<li><a href='#' onclick='load("$url")'>$label</a></li>`
 		
-		$(document).ready(main);
+		function initialise() {
+    		main();
+    		filltabs();
+			}
+
+		$(document).ready(initialise);
 
 		function main() {
 			$.ajax({
@@ -112,7 +117,7 @@ $(document).ready(function(){
 				}
 			});
 			
-		$(document).ready(filltabs);	
+			
 			
 		function filltabs(){
 			fillInfo("#article_1", "#info")
