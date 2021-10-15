@@ -159,7 +159,7 @@ $(document).ready(function(){
 </head>
   
   <body>
-	 <p class="byline"><span id="mention-83" class="mention person" about="YueboYu" data-label="Yuebo Yu" data-sort="YuYuebo">Virginia Virginia</span></p>
+	 <p class="byline"><span id="mention-83" class="mention person" about="YueboYu" data-label="Yuebo Yu" data-sort="YuYuebo">Virginia Prova</span></p>
 		
   <div class="table-responsive" style="overflow-y: hidden">
     <!--Header part, that has to be in all the pages: title of the mag + menu navbar -->
@@ -284,24 +284,47 @@ $(document).ready(function(){
     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body small">
-  <!-- Nuova tab -->
-	  <ul class="nav nav-tabs" id="myTab" role="tablist">
-  <li class="nav-item">
-    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
-  </li>
-</ul>
-<div class="tab-content" id="myTabContent">
-  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
-  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
-  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
-</div>
-	 <!-- Nuova tab -->
+		<!---tab--->
+		<ul class="nav nav-tabs">
+			<li class="nav-item">
+				<a class="nav-link active" id="info-tab" data-toggle="tab" href="#info" role="tab" aria-controls="view" aria-selected="false">Info</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link active" id="person-tab" data-toggle="tab" href="#person" role="tab" aria-controls="view" aria-selected="false">Person</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link active" id="place-tab" data-toggle="tab" href="#place" role="tab" aria-controls="view" aria-selected="false">Place</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link active" id="organisation-tab" data-toggle="tab" href="#organisation" role="tab" aria-controls="view" aria-selected="false">Organisation</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link active" id="concept-tab" data-toggle="tab" href="#concept" role="tab" aria-controls="view" aria-selected="false">Concept</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link active" id="info-tool" data-toggle="tab" href="#tool" role="tab" aria-controls="view" aria-selected="false">Tool</a>
+			</li>
+		</ul>
+		<!---Tab panes--->
+		<div class="tab-content">
+			<div class="tab-pane active myBorder myBorder-notop" id="info" role="tabpanel" aria-labelledby="info-tab">
+			</div>
+			<div class="tab-pane myBorder myBorder-notop" id="person" role="tabpanel" aria-labelledby="asides-tab">
+				<ul class="minimal"></ul>
+			</div>
+			<div class="tab-pane myBorder myBorder-notop" id="place" role="tabpanel" aria-labelledby="speeches-tab">
+				<ul class="minimal"></ul>
+			</div>
+			<div class="tab-pane myBorder myBorder-notop" id="organisation" role="tabpanel" aria-labelledby="quotes-tab">
+				<ul class="minimal"></ul>
+			</div>
+			<div class="tab-pane myBorder myBorder-notop" id="concept" role="tabpanel" aria-labelledby="quotes-tab">
+				<ul class="minimal"></ul>
+			</div>
+			<div class="tab-pane myBorder myBorder-notop" id="tool" role="tabpanel" aria-labelledby="quotes-tab">
+				<ul class="minimal"></ul>
+			</div>
+		</div>
 	</div>
 	</div>
 </div>
