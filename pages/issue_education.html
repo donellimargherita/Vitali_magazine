@@ -156,16 +156,6 @@ $(document).ready(function(){
 		
 	</script>
 		
-
-//funzione per control find on animazione
-		function goto(id) {
-			var t = $(id)[0].offsetTop;
-			$('body').animate({ scrollTop: t }, 200);
-			$(id).addClass('animate');
-			setTimeout(function(){
-				$(id).removeClass('animate');
-			},5000);
-		}
 </head>
   
   <body>
