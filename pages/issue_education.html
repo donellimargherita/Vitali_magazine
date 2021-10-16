@@ -8,8 +8,9 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
 <!---<script>type="text/javascript" src="get_styles.js"</script>--->
+
 
 <style>
 	.container {
@@ -20,8 +21,7 @@
 
 
 </style>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
-	
+ 	
 	
 	
 	<!-- aggiungo jQuery lib che ho scaricato nella cartella-->
@@ -96,7 +96,12 @@ $(document).ready(function(){
 		}
 		var listItemTpl = `<li><a href='#' onclick='load("$url")'>$label</a></li>`
 		
-		$(document).ready(main);
+		function initialise() {
+    		main();
+    		filltabs();
+			}
+
+		$(document).ready(initialise);
 
 		function main() {
 			$.ajax({
@@ -110,7 +115,8 @@ $(document).ready(function(){
 				error: function() {
 					alert('No document to show')
 				}
-			});
+			}) 
+            };
 			
 		function filltabs(){
 			fillInfo("#article_1", "#info")
@@ -150,19 +156,11 @@ $(document).ready(function(){
 		
 	</script>
 		
-
-//funzione per control find on animazione
-		function goto(id) {
-			var t = $(id)[0].offsetTop;
-			$('body').animate({ scrollTop: t }, 200);
-			$(id).addClass('animate');
-			setTimeout(function(){
-				$(id).removeClass('animate');
-			},5000);
-		}
 </head>
   
   <body>
+	 <p class="byline"><span id="mention-83" class="mention person" about="YueboYu" data-label="Yuebo Yu" data-sort="YuYuebo">Virginia Menyu/span></p>
+		
   <div class="table-responsive" style="overflow-y: hidden">
     <!--Header part, that has to be in all the pages: title of the mag + menu navbar -->
     <header>
@@ -286,47 +284,36 @@ $(document).ready(function(){
     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body small">
-		<!---tab--->
-		<ul class="nav nav-tabs">
-			<li class="nav-item">
-				<a class="nav-link active" id="info-tab" data-toggle="tab" href="#info" role="tab" aria-controls="view" aria-selected="false">Info</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link active" id="person-tab" data-toggle="tab" href="#person" role="tab" aria-controls="view" aria-selected="false">Person</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link active" id="place-tab" data-toggle="tab" href="#place" role="tab" aria-controls="view" aria-selected="false">Place</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link active" id="organisation-tab" data-toggle="tab" href="#organisation" role="tab" aria-controls="view" aria-selected="false">Organisation</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link active" id="concept-tab" data-toggle="tab" href="#concept" role="tab" aria-controls="view" aria-selected="false">Concept</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link active" id="info-tool" data-toggle="tab" href="#tool" role="tab" aria-controls="view" aria-selected="false">Tool</a>
-			</li>
-		</ul>
-		<!---Tab panes--->
-		<div class="tab-content">
-			<div class="tab-pane active myBorder myBorder-notop" id="info" role="tabpanel" aria-labelledby="info-tab">
-			</div>
-			<div class="tab-pane myBorder myBorder-notop" id="person" role="tabpanel" aria-labelledby="asides-tab">
-				<ul class="minimal"></ul>
-			</div>
-			<div class="tab-pane myBorder myBorder-notop" id="place" role="tabpanel" aria-labelledby="speeches-tab">
-				<ul class="minimal"></ul>
-			</div>
-			<div class="tab-pane myBorder myBorder-notop" id="organisation" role="tabpanel" aria-labelledby="quotes-tab">
-				<ul class="minimal"></ul>
-			</div>
-			<div class="tab-pane myBorder myBorder-notop" id="concept" role="tabpanel" aria-labelledby="quotes-tab">
-				<ul class="minimal"></ul>
-			</div>
-			<div class="tab-pane myBorder myBorder-notop" id="tool" role="tabpanel" aria-labelledby="quotes-tab">
-				<ul class="minimal"></ul>
-			</div>
-		</div>
+<!-- Nuova tab -->
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Info</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Person</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Place</a>
+  </li>
+ <li class="nav-item">
+    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#organisation" role="tab" aria-controls="contact" aria-selected="false">Organisation</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#concept" role="tab" aria-controls="contact" aria-selected="false">Concept</a>
+  </li>
+  
+  <li class="nav-item">
+    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#tools" role="tab" aria-controls="contact" aria-selected="false">Tools</a>
+  </li> 
+</ul>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
+  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+  <div class="tab-pane fade show active" id="organisation" role="tabpanel" aria-labelledby="home-tab">...</div>
+  <div class="tab-pane fade" id="concept" role="tabpanel" aria-labelledby="profile-tab">...</div>
+  <div class="tab-pane fade" id="tools" role="tabpanel" aria-labelledby="contact-tab">...</div>
+</div>
 	</div>
 	</div>
 </div>
@@ -368,6 +355,9 @@ $(document).ready(function(){
 
     <!--end of the layout-->
 
-
-  </body>
+   </div>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+ 	 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	</body>
 </html>
