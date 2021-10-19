@@ -104,7 +104,7 @@ $(document).ready(function(){
 				filltab("#article_1 .mention-person","list-person","#person")
 				//filltab("#file q.speech","list-speech","#speeches")
 				//filltab("#file q:not(.speech)","list-quote","#quotes")
-			});
+			})
 		
 		function fillInfo(from, where) {
 			var item = `
@@ -113,14 +113,14 @@ $(document).ready(function(){
 				;
 			$(where).empty(); 
 
-			var title = $(from + ' .title')[0].innerText
-			var author = $(from + ' .byline')[0].innerText
+			var title = $(from + ' .title')[0].innerHTML
+			var author = $(from + ' .byline')[0].innerHTML
 			
 			$(where).append(item.tpl( {
 				author: author,
 				title: title,
-			}));
-		};
+			}))
+		}
 		
 		function filltab(what,style,where) {
 			var list = `<li class="list $style"><a href="#" onclick="goto('$place')">$content</a></li>`
