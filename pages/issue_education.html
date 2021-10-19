@@ -88,36 +88,15 @@ $(document).ready(function(){
 	</script>
 	<script>			
 		//script per METADATA VIEWER 
-		String.prototype.tpl = function(o) { 
-			var r = this ; 
-			for (var i in o) { 
-				r = r.replace(new RegExp("\\$"+i, 'g'),o[i])  
-			} 
-			return r 
-		}
-		var listItemTpl = `<li><a href='#' onclick='load("$url")'>$label</a></li>`
+		//String.prototype.tpl = function(o) { 
+			//var r = this ; 
+			//for (var i in o) { 
+				//r = r.replace(new RegExp("\\$"+i, 'g'),o[i])  
+			//} 
+			//return r 
+		//}
+		//var listItemTpl = `<li><a href='#' onclick='load("$url")'>$label</a></li>`
 		
-		function initialise() {
-    		main();
-    		filltabs();
-			}
-
-		$(document).ready(initialise);
-
-		function main() {
-			$.ajax({
-				method: 'GET',
-				url: 'education_filelist.json',
-				success: function(d) {
-					for (var i=0; i<d.length; i++) {
-						$('#list').append(listItemTpl.tpl({url:d[i].url, label: d[i].label}))
-					}	
-				},
-				error: function() {
-					alert('No document to show')
-				}
-			}) 
-            };
 			
 		function filltabs(){
 			fillInfo("#article_1", "#info")
@@ -276,7 +255,7 @@ $(document).ready(function(){
 		<!-- bottone per MDV offcanvas-->
 		<div  id="metadata_viewer">
 				<!--- codice di bootstrap offc. bottom-->
-<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Metadata viewer</button>
+<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom" onclick="filltabs()">Metadata viewer</button>
 
 <div class="offcanvas offcanvas-bottom" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
   <div class="offcanvas-header">
