@@ -34,9 +34,7 @@
 				$("#article_1").load("Issue_education/article1/articolo1.html")
 				$("#article_2").load("Issue_education/article2/articolo2.html")
 				$("#article_3").load("Issue_education/article3/articolo3.html")
-			};
-			filltabs()
-				);	
+			});	
 			
 		
 	</script>
@@ -100,12 +98,13 @@ $(document).ready(function(){
 		}
 		
 			
-		function filltabs(){
-			fillInfo("#article_1", "#info")
-			filltab("#article_1 .mention-person","list-person","#person")
-			//filltab("#file q.speech","list-speech","#speeches")
-			//filltab("#file q:not(.speech)","list-quote","#quotes")
-		};
+		$(document).ready(
+			function filltabs(){
+				fillInfo("#article_1", "#info")
+				filltab("#article_1 .mention-person","list-person","#person")
+				//filltab("#file q.speech","list-speech","#speeches")
+				//filltab("#file q:not(.speech)","list-quote","#quotes")
+			});
 		
 		function fillInfo(from, where) {
 			var item = `
