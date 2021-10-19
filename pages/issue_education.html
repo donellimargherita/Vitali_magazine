@@ -134,7 +134,7 @@ $(document).ready(function(){
 	
 		function filltabs(){
 				fillInfo("#article_1", "#info")
-				filltab("#article_1 .mention-person","list-person","#person")
+				filltab("#article_1 .mention-person","#person")
 			};
 		
 		function fillInfo(from, where) {
@@ -324,13 +324,15 @@ $(document).ready(function(){
 </div>	
 	<!--metadata viewer columns-->
 	<!-- meta art1-->
+	<div > <P id="list">
+				<ul></ul>
+			</p>
+	</div>
 	<div class="card" style="width: 18rem;" class="overflow-auto">
 		<div class="card-body">
 			<h5 class="card-title">Art 1 Meta</h5>
 			
-			<p class="card-text" id="list">
-				
-			</p>
+			
 			<p class="card-text" id="info">
 				<ul></ul>
 			</p>
