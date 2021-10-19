@@ -87,16 +87,16 @@ $(document).ready(function(){
   });
 });
 	</script>
-	<script  type="text/javascript">			
+	<script type="text/javascript">			
 		//script per METADATA VIEWER 
-		//String.prototype.tpl = function(o) { 
-			//var r = this ; 
-			//for (var i in o) { 
-				//r = r.replace(new RegExp("\\$"+i, 'g'),o[i])  
-			//} 
-			//return r 
-		//}
-		//var listItemTpl = `<li><a href='#' onclick='load("$url")'>$label</a></li>`
+		String.prototype.tpl = function(o) { 
+			var r = this ; 
+			for (var i in o) { 
+				r = r.replace(new RegExp("\\$"+i, 'g'),o[i])  
+			} 
+			return r 
+		}
+		var listItemTpl = `<li><a href='#' onclick='load("$url")'>$label</a></li>`
 		
 			
 		function filltabs(){
