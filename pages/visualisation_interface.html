@@ -1,7 +1,7 @@
 
 <!doctype html>
 <html lang="en">
-  <head>
+	<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,68 +11,10 @@
 	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
 	
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
-
-	
-	
-	
-	<!-- aggiungo jQuery lib che ho scaricato nella cartella-->
-	<script type="text/javascript" src="jquery-3.6.0.js"> </script>
-	<!-- scrivo lo script in js/jQuery-->
-	<script type="text/javascript">
-		$(document).ready(
-			function() {
-				$("#article_1").load("ebook/CovidCons/CovidCons.html")
-				$("#article_2").load("ebook/EbookHistory/EbookHistory.html")
-				$("#article_3").load("ebook/Vox the 2010s/Vox the 2010s.html")
-				}
-				);
-	
-		<!--$(document).ready(main);
 		
-			/*function main() {
-				$.ajax({
-					method: 'GET',
-					url: 'filelist_1.json',
-					success: function(d) {
-						for (var i=0; i<d.length; i++) {
-							var li = `<li><a href="#" class="dropdown-item" onclick='load("`+d[i].url+`")'>`+d[i].label+`</a></li>`
-							$('#art-selector').append(li)
-						}	
-					},
-					error: function() {
-						alert('No document to show')
-					}
-				});
-			}*/
-			<!-- function main(){ -->
-			<!-- $.getJSON("filelist_1.json", function(d) { -->
-			<!-- for (var i=0; i<d.length; i++) { -->
-							<!-- var li = `<li><a href="#" class="dropdown-item" onclick='load("`+d[i].url+`")'>`+d[i].label+`</a></li>` -->
-							<!-- $('#art-selector').append(li) -->
-						<!-- } -->
-			<!-- }); -->
-			<!-- } -->
-					
-			<!-- function load(file) {	 -->
-				<!-- $.ajax({ -->
-					<!-- method: 'GET', -->
-					<!-- url: file, -->
-					<!-- success: function(d) { -->
-						<!-- $('#file').html(d) -->
-						<!-- //$('#title').html($('#file h1')) -->
-						<!-- $('.show').prop("checked", false) -->
-					<!-- }, -->
-					<!-- error: function() { -->
-						<!-- alert('Could not load file '+file) -->
-					<!-- } -->
-				<!-- }); -->
-			<!-- } -->
-
-	</script>
-	<script>type="text/javascript" src="get_styles.js"</script>
-  </head>
+	</head>
   
-  <body>
+ 	 <body>
     <!--Header part, that has to be in all the pages: title of the mag + menu navbar -->
     <header>
     <h1>Magazine Name</h1>
@@ -184,69 +126,7 @@
 				<button type="button" id="accessible" class="btn btn-outline-dark" onclick="changeStyle('styles/2030/2030.css')">Accessible</button>
 				<button type="button" id="reset" class="btn btn-outline-white" onclick="changeStyle('')">Reset</button>
 			</div>
-		<!-- bottone per MDV offcanvas-->
-		<div  id="metadata_viewer">
-				<!--- codice di bootstrap offc. bottom-->
-<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Metadata viewer</button>
-
-<div class="offcanvas offcanvas-bottom" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasBottomLabel">Metadata viewer</h5>
-    <p><h6>Please select an article</h6></p>
-    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
-  <div class="offcanvas-body small">
-		<!---tab--->
-		<ul class="nav nav-tabs">
-			<li class="nav-item">
-				<a class="nav-link" id="info-tab" data-toggle="tab" href="#info" role="tab" aria-controls="view" aria-selected="false">Info</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" id="person-tab" data-toggle="tab" href="#person" role="tab" aria-controls="view" aria-selected="false">Person</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" id="place-tab" data-toggle="tab" href="#place" role="tab" aria-controls="view" aria-selected="false">Place</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" id="organisation-tab" data-toggle="tab" href="#organisation" role="tab" aria-controls="view" aria-selected="false">Organisation</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" id="concept-tab" data-toggle="tab" href="#concept" role="tab" aria-controls="view" aria-selected="false">Concept</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" id="info-tool" data-toggle="tab" href="#tool" role="tab" aria-controls="view" aria-selected="false">Tool</a>
-			</li>
-		</ul>
-		<!---Tab panes--->
-		<div class="tab-content">
-			<div class="tab-pane active myBorder myBorder-notop" id="info" role="tabpanel" aria-labelledby="info-tab">
-			</div>
-			<div class="tab-pane myBorder myBorder-notop" id="person" role="tabpanel" aria-labelledby="asides-tab">
-				<ul class="minimal"></ul>
-			</div>
-			<div class="tab-pane myBorder myBorder-notop" id="place" role="tabpanel" aria-labelledby="speeches-tab">
-				<ul class="minimal"></ul>
-			</div>
-			<div class="tab-pane myBorder myBorder-notop" id="organisation" role="tabpanel" aria-labelledby="quotes-tab">
-				<ul class="minimal"></ul>
-			</div>
-			<div class="tab-pane myBorder myBorder-notop" id="concept" role="tabpanel" aria-labelledby="quotes-tab">
-				<ul class="minimal"></ul>
-			</div>
-			<div class="tab-pane myBorder myBorder-notop" id="tool" role="tabpanel" aria-labelledby="quotes-tab">
-				<ul class="minimal"></ul>
-			</div>
-		</div>
-	</div>
-	</div>
-</div>
-</div>
-
-
-		</header>
-
-
-
+				
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 <div id="space">
