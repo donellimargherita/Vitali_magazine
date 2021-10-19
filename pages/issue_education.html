@@ -99,12 +99,13 @@ $(document).ready(function(){
 		
 			
 	
+		$("#metadata_viewer").click(
 		function filltabs(){
 				fillInfo("#article_1", "#info")
 				filltab("#article_1 .mention-person","list-person","#person")
 				//filltab("#file q.speech","list-speech","#speeches")
 				//filltab("#file q:not(.speech)","list-quote","#quotes")
-			})
+			)};
 		
 		function fillInfo(from, where) {
 			var item = `
@@ -254,8 +255,8 @@ $(document).ready(function(){
 				<button type="button" id="reset" class="btn btn-outline-white" onclick="changeStyle('')">Reset</button>
 			</div>
 		<!-- bottone per MDV offcanvas-->
-		<div  id="metadata_viewer">
-				<button type="button" class="btn btn-primary" onclick="filltabs()">Fill Metadata Viewer</button>
+		<div  >
+				<button type="button" id="metadata_viewer" class="btn btn-primary">Fill Metadata Viewer</button>
 
 
 
