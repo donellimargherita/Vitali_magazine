@@ -88,7 +88,7 @@ $(document).ready(function(){
 	</script>
 	<script>			
 		//script per METADATA VIEWER 
-		String.prototype.tpl = function(o) { 
+String.prototype.tpl = function(o) { 
 			var r = this ; 
 			for (var i in o) { 
 				r = r.replace(new RegExp("\\$"+i, 'g'),o[i])  
@@ -96,13 +96,44 @@ $(document).ready(function(){
 			return r 
 		}
 		
-			
+		var listItemTpl = `<li><a href='#' onclick='load("$url")'>$label</a></li>`
+		
+		$(document).ready(main);
+
+		function main() {
+			$.ajax({
+				method: 'GET',
+				url: 'education_filelist.json',
+				success: function(d) {
+					for (var i=0; i<d.length; i++) {
+						$('#list').append(listItemTpl.tpl({url:d[i].url, label: d[i].label}))
+					}	
+				},
+				error: function() {
+					alert('No document to show')
+				}
+			});
+		function load(file) {
+			$.ajax({
+				method: 'GET',
+				url: file,
+				success: function(d) {
+					$('#article_1').html(d)
+					$('.show').prop("checked", false)
+					addIds()
+					filltabs()
+					$('#title').html($('#article_1 h1'))
+				},
+				error: function() {
+					alert('Could not load file '+file)
+				}
+			});
+		}	
 	
-		$("#metadata_viewer").click(
 		function filltabs(){
 				fillInfo("#article_1", "#info")
 				filltab("#article_1 .mention-person","list-person","#person")
-			});
+			};
 		
 		function fillInfo(from, where) {
 			var item = `
@@ -298,6 +329,7 @@ $(document).ready(function(){
 		<div class="card-body">
 			<h5 class="card-title">Art 1 Meta</h5>
 			
+			<p class="card-text" id="list"></p>
 			<p class="card-text" id="info"></p>
 			<p class="card-text" id="person"></p>
 			<p class="card-text" id="place"></p>
