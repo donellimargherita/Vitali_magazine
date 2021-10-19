@@ -83,32 +83,75 @@ $(document).ready(function(){
   });
 });
 	</script>				
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 	<script>			
-		//script per METADATA VIEWER 
-			
-		function filltabs(){
-			fillInfo("#article_1", "#info")
-			filltab("#article_1. mention-person","list-person","#person")
-			//filltab("#file q.speech","list-speech","#speeches")
-			//filltab("#file q:not(.speech)","list-quote","#quotes")
-		};
+	String.prototype.tpl = function(o) { 
+			var r = this ; 
+			for (var i in o) { 
+				r = r.replace(new RegExp("\\$"+i, 'g'),o[i])  
+			} 
+			return r 
+		}
+		
+		var listItemTpl = `<li><a href='#' onclick='load("$url")'>$label</a></li>`
+		
+		$(document).ready(main);
+
+		function main() {
+			$.ajax({
+				method: 'GET',
+				url: 'education_filelist.json',
+				success: function(d) {
+					for (var i=0; i<d.length; i++) {
+						$('#list').append(listItemTpl.tpl({url:d[i].url, label: d[i].label}))
+					}	
+				},
+				error: function() {
+					alert('No document to show')
+				}
+			});
+		//function load(file) {
+		//	$.ajax({
+		//		method: 'GET',
+		//		url: file,
+		//		success: function(d) {
+		//			$('#article_1').html(d)
+		//			$('.show').prop("checked", false)
+		//			addIds()
+		//			filltabs()
+		//			$('#title').html($('#article_1 h1'))
+		//		},
+		//		error: function() {
+		//			alert('Could not load file '+file)
+		//		}
+		//	});
+		//}	
+	
+		//function filltabs(){
+		//		fillInfo("#article_1", "#info")
+		//		filltab("#article_1 .mention-person","list-person","#person")
+		//	};
 		
 		function fillInfo(from, where) {
-			var item = 
-				"<p class="list title"><b>Title:</b>$title</p> <p class="list author"><b>Author:</b>$author</p>"		
+			var item = `
+				<p class="list title"><b>Title: </b> $title</p>
+				<p class="list author"><b>Author:</b>$author</p>`			
+				;
 			$(where).empty(); 
 
-			var title = $(from + ' .title')[0].innerText
-			var author = $(from + ' .byline')[0].innerText
+			var title = $(from + ' .title')[0].innerHTML
+			var author = $(from + ' .byline')[0].innerHTML
 			
 			$(where).append(item.tpl( {
 				author: author,
 				title: title,
-			}));
-		};
+			}))
+		}
 		
 		function filltab(what,style,where) {
-			var list = "<li class="list $style"><a href="#" onclick="goto('$place')">$content</a></li>"
+			var list = `<li class="list $style"><a href="#" onclick="goto('$place')">$content</a></li>`
 			var elements = $(what); 
 			$(where+' ul').empty(); 
 			for (var i=0; i<elements.length; i++) {
@@ -120,17 +163,7 @@ $(document).ready(function(){
 			}
 		}
 		
-	
-<!---funzione per control find on animazione--->
-		function goto(id) {
-			var t = $(id)[0].offsetTop;
-			$('body').animate({ scrollTop: t }, 200);
-			$(id).addClass('animate');
-			setTimeout(function(){
-				$(id).removeClass('animate');
-			},5000);
-		} 
-	</script>	
+	</script>
 	
   </head>
   <body>
@@ -252,22 +285,52 @@ $(document).ready(function(){
 
 				<div class="offcanvas offcanvas-top" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel"> ---> 
 				
-				<!--- codice di bootstrap offc. bottom-->
-<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Metadata viewer</button>
-
-<div class="offcanvas offcanvas-bottom" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasBottomLabel">Metadata viewer</h5>
-    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
-  <div class="offcanvas-body small">
-		<!--- ho tolto tab e tabpanes-->
+<!---tab--->
+		<ul class="nav nav-tabs">
+			<li class="nav-item">
+				<a class="nav-link" id="info-tab" data-toggle="tab" href="#info" role="tab" aria-controls="view" aria-selected="false">Info</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" id="person-tab" data-toggle="tab" href="#person" role="tab" aria-controls="view" aria-selected="false">Person</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" id="place-tab" data-toggle="tab" href="#place" role="tab" aria-controls="view" aria-selected="false">Place</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" id="organisation-tab" data-toggle="tab" href="#organisation" role="tab" aria-controls="view" aria-selected="false">Organisation</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" id="concept-tab" data-toggle="tab" href="#concept" role="tab" aria-controls="view" aria-selected="false">Concept</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" id="info-tool" data-toggle="tab" href="#tool" role="tab" aria-controls="view" aria-selected="false">Tool</a>
+			</li>
+		</ul>
+		<!---Tab panes--->
+		<div class="tab-content">
+			<div class="tab-pane active myBorder myBorder-notop" id="info" role="tabpanel" aria-labelledby="info-tab">
+			</div>
+			<div class="tab-pane myBorder myBorder-notop" id="person" role="tabpanel" aria-labelledby="asides-tab">
+				<ul class="minimal"></ul>
+			</div>
+			<div class="tab-pane myBorder myBorder-notop" id="place" role="tabpanel" aria-labelledby="speeches-tab">
+				<ul class="minimal"></ul>
+			</div>
+			<div class="tab-pane myBorder myBorder-notop" id="organisation" role="tabpanel" aria-labelledby="quotes-tab">
+				<ul class="minimal"></ul>
+			</div>
+			<div class="tab-pane myBorder myBorder-notop" id="concept" role="tabpanel" aria-labelledby="quotes-tab">
+				<ul class="minimal"></ul>
+			</div>
+			<div class="tab-pane myBorder myBorder-notop" id="tool" role="tabpanel" aria-labelledby="quotes-tab">
+				<ul class="minimal"></ul>
 			</div>
 		</div>
 	</div>
 	</div>
 </div>
 </div>
+
 
 
 		</header>
