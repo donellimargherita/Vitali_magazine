@@ -122,7 +122,7 @@ $(document).ready(function(){
 				success: function(d) {
 					$('#file').html(d)
 					filltabs()
-					$('#title').html($('#article_1 h1'))
+					$('#title').html($('#file h1'))
 				},
 				error: function() {
 					alert('Could not load file '+file)
