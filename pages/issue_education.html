@@ -115,27 +115,27 @@ $(document).ready(function(){
 					alert('No document to show')
 				}
 			});
-		function load(file) {
-			$.ajax({
-				method: 'GET',
-				url: file,
-				success: function(d) {
-					$('#article_1').html(d)
-					$('.show').prop("checked", false)
-					addIds()
-					filltabs()
-					$('#title').html($('#article_1 h1'))
-				},
-				error: function() {
-					alert('Could not load file '+file)
-				}
-			});
-		}	
+		//function load(file) {
+		//	$.ajax({
+		//		method: 'GET',
+		//		url: file,
+		//		success: function(d) {
+		//			$('#article_1').html(d)
+		//			$('.show').prop("checked", false)
+		//			addIds()
+		//			filltabs()
+		//			$('#title').html($('#article_1 h1'))
+		//		},
+		//		error: function() {
+		//			alert('Could not load file '+file)
+		//		}
+		//	});
+		//}	
 	
-		function filltabs(){
-				fillInfo("#article_1", "#info")
-				filltab("#article_1 .mention-person","list-person","#person")
-			};
+		//function filltabs(){
+		//		fillInfo("#article_1", "#info")
+		//		filltab("#article_1 .mention-person","list-person","#person")
+		//	};
 		
 		function fillInfo(from, where) {
 			var item = `
@@ -327,12 +327,12 @@ $(document).ready(function(){
 </div>	
 	<!--metadata viewer columns-->
 	<!-- meta art1-->
-	<div class="card" style="width: 18rem;" class="overflow-auto">
+	<div class="card" onload="fillInfo(#article_1, #info)" style="width: 18rem;" class="overflow-auto">
 		<div class="card-body">
 			<h5 class="card-title">Art 1 Meta</h5>
 			
-			<p class="card-text" id="list">ciao</p>
-			<p class="card-text" id="info">vaffanculo</p>
+			<p class="card-text" id="list"></p>
+			<p class="card-text" id="info"></p>
 			<p class="card-text" id="person"></p>
 			<p class="card-text" id="place"></p>
 			<p class="card-text" id="organisation"></p>
