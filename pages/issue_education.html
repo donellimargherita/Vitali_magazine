@@ -34,9 +34,11 @@
 				$("#article_1").load("Issue_education/article1/articolo1.html")
 				$("#article_2").load("Issue_education/article2/articolo2.html")
 				$("#article_3").load("Issue_education/article3/articolo3.html")
-				});
+			};
+			filltabs();
+				);	
+			
 		
-		$(document).ready(filltabs());
 	</script>
 	<script  type="text/javascript">
 	<!--- script per cambiare gli stili---!>
@@ -87,7 +89,7 @@ $(document).ready(function(){
   });
 });
 	</script>
-	<script type="text/javascript">			
+	<script>			
 		//script per METADATA VIEWER 
 		String.prototype.tpl = function(o) { 
 			var r = this ; 
@@ -96,7 +98,6 @@ $(document).ready(function(){
 			} 
 			return r 
 		}
-		var listItemTpl = `<li><a href='#' onclick='load("$url")'>$label</a></li>`
 		
 			
 		function filltabs(){
@@ -108,9 +109,9 @@ $(document).ready(function(){
 		
 		function fillInfo(from, where) {
 			var item = `
-				<p class="list title"><b>Title:</b>$title</p>
-				<p class="list author"><b>Author:</b>$author</p>			
-				` ;
+				<p class="list title"><b>Title: </b> $title</p>
+				<p class="list author"><b>Author:</b>$author</p>`			
+				;
 			$(where).empty(); 
 
 			var title = $(from + ' .title')[0].innerText
