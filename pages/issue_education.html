@@ -121,8 +121,6 @@ $(document).ready(function(){
 				url: file,
 				success: function(d) {
 					$('#file').html(d)
-					$('.show').prop("checked", false)
-					addIds()
 					filltabs()
 					$('#title').html($('#article_1 h1'))
 				},
