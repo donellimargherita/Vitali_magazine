@@ -105,7 +105,7 @@ $(document).ready(function(){
 				url: 'ebook_filelist.json',
 				success: function(d) {
 					for (var i=0; i<d.length; i++) {
-						$('#list').append(listItemTpl.tpl({url:d[i].url, label: d[i].label}))
+						$('#info').append(listItemTpl.tpl({url:d[i].url, label: d[i].label}))
 					}	
 				},
 				error: function() {
@@ -293,7 +293,7 @@ $(document).ready(function(){
 			<div class="card" style="width:100%">
   				<div class="card-body">
     				<a class="nav-link" id="person-tab" data-toggle="tab" href="#person" role="tab" aria-controls="view" aria-selected="false">Person</a>
-    					<p class="card-text" id="info">
+    					<p class="card-text" id="person">
 							<ul></ul>
 						</p>
   				</div>
@@ -304,7 +304,7 @@ $(document).ready(function(){
 			<div class="card" style="width:100%">
   				<div class="card-body">
     				<a class="nav-link" id="place-tab" data-toggle="tab" href="#place" role="tab" aria-controls="view" aria-selected="false">Place</a>
-    					<p class="card-text" id="info">
+    					<p class="card-text" id="place">
 							<ul></ul>
 						</p>
   				</div>
@@ -315,7 +315,7 @@ $(document).ready(function(){
 			<div class="card" style="width:100%">
   				<div class="card-body">
     				<a class="nav-link" id="organisation-tab" data-toggle="tab" href="#organisation" role="tab" aria-controls="view" aria-selected="false">Organisation</a>
-    					<p class="card-text" id="info">
+    					<p class="card-text" id="organisation">
 							<ul></ul>
 						</p>
   				</div>
@@ -326,7 +326,7 @@ $(document).ready(function(){
 			<div class="card" style="width:100%">
   				<div class="card-body">
     				<a class="nav-link" id="concept-tab" data-toggle="tab" href="#concept" role="tab" aria-controls="view" aria-selected="false">Concept</a>
-    					<p class="card-text" id="info">
+    					<p class="card-text" id="concept">
 							<ul></ul>
 						</p>
   				</div>
@@ -337,7 +337,7 @@ $(document).ready(function(){
 			<div class="card" style="width:100%">
   				<div class="card-body">
     				<a class="nav-link" id="tool-tab" data-toggle="tab" href="#tool" role="tab" aria-controls="view" aria-selected="false">Tool</a>
-    					<p class="card-text" id="info">
+    					<p class="card-text" id="tool">
 							<ul></ul>
 						</p>
   				</div>
