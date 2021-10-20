@@ -105,7 +105,7 @@ $(document).ready(function(){
 				url: 'ebook_filelist.json',
 				success: function(d) {
 					for (var i=0; i<d.length; i++) {
-						$('#info').append(listItemTpl.tpl({url:d[i].url, label: d[i].label}))
+						$('#list').append(listItemTpl.tpl({url:d[i].url, label: d[i].label}))
 					}	
 				},
 				error: function() {
@@ -283,7 +283,9 @@ $(document).ready(function(){
   				<div class="card-body">
     				<a class="nav-link" id="info-tab" data-toggle="tab" href="#info" role="tab" aria-controls="view" aria-selected="false">Info</a>
     					<p class="card-text" id="info">
+    					<p id="list">
 							<ul></ul>
+						</p>
 						</p>
   				</div>
 			</div>
