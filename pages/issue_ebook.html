@@ -117,11 +117,9 @@ $(document).ready(function(){
 				method: 'GET',
 				url: file,
 				success: function(d) {
-					$('#article_1').html(d)
-					$('.show').prop("checked", false)
-					addIds()
+					$('#file').html(d)
 					filltabs()
-					$('#title').html($('#article_1 h1'))
+					$('#title').html($('#file h1'))
 				},
 				error: function() {
 					alert('Could not load file '+file)
@@ -130,12 +128,8 @@ $(document).ready(function(){
 		}	
 	
 		function filltabs(){
-				fillInfo("#file", "#info")
-				filltab("#file .mention-person","#person")
-				filltab("#file .mention-place", "#place")
-				filltab("#file .mention-organization", "#organization")
-				filltab("#file .mention-concept","#concept")
-				filltab("#file .mention-tool","#tool")
+				fillInfo("#article_1", "#info")
+				filltab("#article_1 .mention-person","#person")
 			};
 		
 		function fillInfo(from, where) {
@@ -154,21 +148,19 @@ $(document).ready(function(){
 			}))
 		}
 		
-		function filltab(what,style,where) {
-			var list = `<li class="list $style"><a href="#" onclick="goto('$place')">$content</a></li>`
-			var elements = $(what); 
-			$(where+' ul').empty(); 
+		function filltab(what, where) {
+			var list= `<li><a href="#" onclick="goto('$place')">$content</a></li>`;
+			var elements= $(what);
+			$(where+' ul').empty();
 			for (var i=0; i<elements.length; i++) {
-				$(where+' ul').append(list.tpl({
-					style:style, 
+				$(where+' ul').append(list.tpl({ 
 					place: '#'+elements[i].id,
 					content: elements[i].innerHTML
-				}) )
+					}))
+				}
 			}
 		}
-		
-	</script>
-	
+</script>
   </head>
   <body>
 	<div class="table-responsive" style="overflow-y: hidden">
@@ -284,12 +276,22 @@ $(document).ready(function(){
 					<button type="button" id="reset" class="btn btn-outline-white" onclick="changeStyle('')">Reset</button>
 				</div>
 
-	<div id="metadata_viewer">
+<div class="container">
+	<div class="row" id="metadata_viewer">
+		<div class="col">
+			<div class="card" style="width:100%">
+  				<div class="card-body">
+    				<a class="nav-link" id="info-tab" data-toggle="tab" href="#info" role="tab" aria-controls="view" aria-selected="false">Info</a>
+    					<p class="card-text" id="info">
+							<ul></ul>
+						</p>
+  				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
-		<ul class="nav nav-tabs">
-			<li class="nav-item">
-				<a class="nav-link" id="info-tab" data-toggle="tab" href="#info" role="tab" aria-controls="view" aria-selected="false">Info</a>
-			</li>
+		
 			<li class="nav-item">
 				<a class="nav-link" id="person-tab" data-toggle="tab" href="#person" role="tab" aria-controls="view" aria-selected="false">Person</a>
 			</li>
