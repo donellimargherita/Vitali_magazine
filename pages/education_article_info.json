@@ -1,0 +1,23 @@
+{	
+		"article_1" : {
+			"title": "After Covid, will digital learning be the new normal?",
+			"author": "Nic Fleming",
+			"issued": "2021-01-23",
+			"publisher": "The Guardian",
+			"source": "https://www.theguardian.com/education/2021/jan/23/after-covid-will-digital-learning-be-the-new-normal"
+	},
+		"article_2" : {
+			"title": "Running a Virtual School on Chicago’s West Side",
+			"author": "Peter Slevin",
+			"issued": "2020-09-20",
+			"publisher": "New Yorker",
+			"source": "https://www.newyorker.com/news/us-journal/running-a-virtual-school-on-chicagos-west-side"
+	}, 
+		"article_3" : {
+			"title": "High school students’ experience of online learning during Covid-19: the influence of technology and pedagogy",
+			"author": "Anne Yates , Louise Starkey , Ben Egerton & Florian Flueggen",
+			"issued": "2020-12-01",
+			"publisher": "Technology, Pedagogy and Education",
+			"source": "https://doi.org/10.1080/1475939X.2020.1854337"
+	}
+}

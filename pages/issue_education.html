@@ -105,7 +105,7 @@ $(document).ready(function(){
 		function main() {
 			$.ajax({
 				method: 'GET',
-				url: 'education_filelist.json',
+				url: 'education_article_info.json',
 				success: function(d) {
 					for (var i=0; i<d.length; i++) {
 						$('#list').append(listItemTpl.tpl({url:d[i].url, label: d[i].label}))
