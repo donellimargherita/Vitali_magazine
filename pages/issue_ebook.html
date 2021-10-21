@@ -126,26 +126,26 @@ $(document).ready(function(){
 				//}
 			//});
 		//}	// -->
-		function filltabs(){
-					fillInfo("#article_1", "#info")
-					filltab("#file .mention-person","#person")
-			};
+		<!-- function filltabs(){
+					//fillInfo("#article_1", "#info")
+					//filltab("#file .mention-person","#person")
+			//};
 		
-		function fillInfo(from, where) {
-			var item = `
-				<p class="list title"><b>Title: </b> $title</p>
-				<p class="list author"><b>Author:</b>$author</p>`			
-				;
-			$(where).empty(); 
+		//function fillInfo(from, where) {
+			//var item = `
+				//<p class="list title"><b>Title: </b> $title</p>
+				//<p class="list author"><b>Author:</b>$author</p>`			
+				//;
+			//$(where).empty(); 
 
-			var title = $(from + ' .title')[0].innerHTML
-			var author = $(from + ' .byline')[0].innerHTML
+			//var title = $(from + ' .title')[0].innerHTML
+			//var author = $(from + ' .byline')[0].innerHTML
 			
-			$(where).append(item.tpl( {
-				author: author,
-				title: title,
-			}))
-		}
+			//$(where).append(item.tpl( {
+				//author: author,
+				//title: title,
+			//}))
+		//} -->
 		
 		function filltab(what, where) {
 			var list= `<li><a href="#" onclick="goto('$place')">$content</a></li>`;
@@ -265,7 +265,7 @@ $(document).ready(function(){
 					</ul>
 					</div>
 					
-			<!--bottone trigger metadata--> <button type="button" id="metadata" class="btn btn-outline-success" onclick="filltabs()">Metadata</button>
+			<!--bottone trigger metadata--> <button type="button" id="metadata" class="btn btn-outline-success" onclick="filltab("#file .mention-person","#person")">Metadata</button>
 			<!-- bottoni style selector-->
 				<div id="style_selector" class="d-flex justify-content-center">
 									<button type="button" id="aldine" class="btn btn-outline-primary" onclick="changeStyle('styles/1500/aldine.css')">Aldine</button>
