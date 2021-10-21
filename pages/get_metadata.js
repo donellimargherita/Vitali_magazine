@@ -1,5 +1,3 @@
-		<script type="text/javascript" src="jquery-3.6.0.js"> </script>
-		
 		String.prototype.tpl = function(o) { 
 			var r = this ; 
 			for (var i in o) { 
