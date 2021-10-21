@@ -20,7 +20,7 @@
 		function main() {
 			$.ajax({
 				method: 'GET',
-				url: 'filelist.json',
+				url: 'ebook_filelist.json',
 				success: function(d) {
 					for (var i=0; i<d.length; i++) {
 						$('#list').append(listItemTpl.tpl({url:d[i].url, label: d[i].label}))
@@ -32,23 +32,23 @@
 			});
 			
 			
-			$('#showasides').click(function() {
+			$('#showperson').click(function() {
 				if (this.checked) 
-					$('.aside').addClass('text-aside')
+					$('.mention-person').addClass('text-person')
 				else
-					$('.aside').removeClass('text-aside')
+					$('.mention-person').removeClass('text-person')
 			})
-			$('#showspeeches').click(function() {
+			$('#showplace').click(function() {
 				if (this.checked) 
-					$('q.speech').addClass('text-speeches')
+					$('.mention-place').addClass('text-place')
 				else
-					$('q.speech').removeClass('text-speeches')
+					$('.mention-place').removeClass('text-place')
 			})
-			$('#showquotes').change(function() {
+			$('#showconcept').change(function() {
 				if (this.checked) 
-					$('q:not(.speech)').addClass('text-quotes')
+					$('.mention-concept').addClass('text-concept')
 				else
-					$('q:not(speech)').removeClass('text-quotes')
+					$('.mention-concept').removeClass('text-concept')
 			})
 		}
 		
@@ -70,9 +70,9 @@
 		}
 		
 		function addIds() {
-			addId('.aside','aside')
-			addId('q.speech', 'speech')
-			addId('q:not(.speech)', 'quote')
+			addId('.mention-person','person')
+			addId('.mention-place', 'place')
+			addId('.mention-concept', 'concept')
 		}
 		
 		function addId(what, prefix) {
@@ -83,9 +83,9 @@
 			}
 		}
 		function filltabs(){
-			filltab("#file .aside","list-aside","#asides")
-			filltab("#file q.speech","list-speech","#speeches")
-			filltab("#file q:not(.speech)","list-quote","#quotes")
+			filltab("#file .mention-person","list-person","#person")
+			filltab("#file .mention-place","list-place","#place")
+			filltab("#file .mention-concept","list-concept","#concept")
 		}
 		
 		function filltab(what,style,where) {
