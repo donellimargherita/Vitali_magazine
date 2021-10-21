@@ -229,8 +229,7 @@ $(document).ready(function(){
 						<li><a class="dropdown-item" href="issue_education.html">Education</a></li>
 					</ul>
 					</div>
-					
-			<!--bottone trigger metadata--> <button type="button" id="metadata" class="btn btn-outline-success" onclick="filltab("#file .mention-person","#person")">Metadata</button>
+				
 			<!-- bottoni style selector-->
 				<div id="style_selector" class="d-flex justify-content-center">
 									<button type="button" id="aldine" class="btn btn-outline-primary" onclick="changeStyle('styles/1500/aldine.css')">Aldine</button>
@@ -258,11 +257,11 @@ $(document).ready(function(){
 					<div class="col-md-12">
 						<form role="form">
 							<div class="checkbox"><label>
-								<input type="checkbox" id="showperson" class="show">Show asides</label></div>
+								<input type="checkbox" id="showperson" class="show">Show person</label></div>
 							<div class="checkbox"><label>
-								<input type="checkbox" id="showplace" class="show">Show speeches</label></div>
+								<input type="checkbox" id="showplace" class="show">Show place</label></div>
 							<div class="checkbox"><label>
-								<input type="checkbox" id="showconcept" class="show">Show quotes</label></div>
+								<input type="checkbox" id="showconcept" class="show">Show concept</label></div>
 						</form>
 					</div>
 				</div>
@@ -331,27 +330,6 @@ $(document).ready(function(){
 		
 	</div>
 </div>
-
-		<!---Tab panes--->
-		<div class="tab-content">
-			<div class="tab-pane active myBorder myBorder-notop" id="info" role="tabpanel" aria-labelledby="info-tab">
-			</div>
-			<div class="tab-pane myBorder myBorder-notop" id="person" role="tabpanel" aria-labelledby="asides-tab">
-				<ul class="mention-person"></ul>
-			</div>
-			<div class="tab-pane myBorder myBorder-notop" id="place" role="tabpanel" aria-labelledby="speeches-tab">
-				<ul class="mention-place"></ul>
-			</div>
-			<div class="tab-pane myBorder myBorder-notop" id="organisation" role="tabpanel" aria-labelledby="quotes-tab">
-				<ul class="mention-organisation"></ul>
-			</div>
-			<div class="tab-pane myBorder myBorder-notop" id="concept" role="tabpanel" aria-labelledby="quotes-tab">
-				<ul class="mention-concept"></ul>
-			</div>
-			<div class="tab-pane myBorder myBorder-notop" id="tool" role="tabpanel" aria-labelledby="quotes-tab">
-				<ul class="mention-tool"></ul>
-			</div>
-		</div>
 	</div>
 	</div>
 </div>
