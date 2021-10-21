@@ -53,7 +53,6 @@
 					$('#file').html(d)
 					$('#title').html($('#file h1'))
 					$('.show').prop("checked", false)
-					addIds()
 					filltabs()
 				},
 				error: function() {
@@ -62,19 +61,7 @@
 			});
 		}
 		
-		function addIds() {
-			addId('#file .mention-person','person')
-			addId('#file .mention-place', 'place')
-			addId('#file .mention-concept', 'concept')
-		}
 		
-		function addId(what, prefix) {
-			var id = '0'
-			var elements = $(what); 
-			for (var i=0; i<elements.length; i++) {
-				elements[i].id = prefix + "-" + id++
-			}
-		}
 		function filltabs(){
 			filltab("#file .mention-person","list-person","#person")
 			filltab("#file .mention-place","list-place","#place")
