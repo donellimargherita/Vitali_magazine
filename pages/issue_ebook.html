@@ -241,12 +241,13 @@ $(document).ready(function(){
 					<button type="button" id="reset" class="btn btn-outline-white" onclick="changeStyle('')">Reset</button>
 				</div>
 
+<!-- cards metadata--> 
 <div class="container">
 	<div class="row" id="metadata_viewer">
 		<div class="col">
 			<div class="card" style="width:100%">
   				<div class="card-body">
-    				<a class="nav-link" id="info-tab" data-toggle="tab" href="#info" role="tab" aria-controls="view" aria-selected="false">Info</a>
+    				Info
     					<p class="card-text" id="info">
     					<p id="list">
 							<ul></ul>
@@ -254,28 +255,26 @@ $(document).ready(function(){
 						</p>
 						<!--checkboxes-->
 						<div class="row clearfix mt-4">
-					<div class="col-md-12">
-						<form role="form">
-							<div class="checkbox"><label>
-								<input type="checkbox" id="showperson" class="show">Show person</label></div>
-							<div class="checkbox"><label>
-								<input type="checkbox" id="showplace" class="show">Show place</label></div>
-							<div class="checkbox"><label>
-								<input type="checkbox" id="showconcept" class="show">Show concept</label></div>
-						</form>
-					</div>
-				</div>
+							<div class="col-md-12">
+								<form role="form">
+									<div class="checkbox"><label>
+										<input type="checkbox" id="showperson" class="show">Show person</label></div>
+									<div class="checkbox"><label>
+										<input type="checkbox" id="showplace" class="show">Show place</label></div>
+									<div class="checkbox"><label>
+										<input type="checkbox" id="showconcept" class="show">Show concept</label></div>
+								</form>
+							</div>
+						</div>
   				</div>
 			</div>
 		</div>
 		
 		<div class="col">
 			<div class="card" style="width:100%">
-  				<div class="card-body">
-    				<a class="nav-link" id="person-tab" data-toggle="tab" href="#person" role="tab" aria-controls="view" aria-selected="false">Person</a>
+  				<div class="card-body">Person
     					<p class="card-text" id="person">
-							<ul>
-								<li onclick="goto()"></li>
+							<ul>	
 							</ul>
 						</p>
   				</div>
@@ -285,7 +284,7 @@ $(document).ready(function(){
 		<div class="col">
 			<div class="card" style="width:100%">
   				<div class="card-body">
-    				<a class="nav-link" id="place-tab" data-toggle="tab" href="#place" role="tab" aria-controls="view" aria-selected="false">Place</a>
+    				Place
     					<p class="card-text" id="place">
 							<ul></ul>
 						</p>
@@ -295,8 +294,7 @@ $(document).ready(function(){
 		
 		<div class="col">
 			<div class="card" style="width:100%">
-  				<div class="card-body">
-    				<a class="nav-link" id="organisation-tab" data-toggle="tab" href="#organisation" role="tab" aria-controls="view" aria-selected="false">Organisation</a>
+  				<div class="card-body">Organisation
     					<p class="card-text" id="organisation">
 							<ul></ul>
 						</p>
@@ -307,7 +305,7 @@ $(document).ready(function(){
 		<div class="col">
 			<div class="card" style="width:100%">
   				<div class="card-body">
-    				<a class="nav-link" id="concept-tab" data-toggle="tab" href="#concept" role="tab" aria-controls="view" aria-selected="false">Concept</a>
+    				Concept
     					<p class="card-text" id="concept">
 							<ul></ul>
 						</p>
@@ -318,7 +316,7 @@ $(document).ready(function(){
 		<div class="col">
 			<div class="card" style="width:100%">
   				<div class="card-body">
-    				<a class="nav-link" id="tool-tab" data-toggle="tab" href="#tool" role="tab" aria-controls="view" aria-selected="false">Tool</a>
+    				Tool
     					<p class="card-text" id="tool">
 							<ul></ul>
 						</p>
