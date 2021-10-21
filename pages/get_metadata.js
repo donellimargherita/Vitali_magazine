@@ -63,9 +63,9 @@
 		}
 		
 		function addIds() {
-			addId('.mention-person','person')
-			addId('.mention-place', 'place')
-			addId('.mention-concept', 'concept')
+			addId('#file .mention-person','person')
+			addId('#file .mention-place', 'place')
+			addId('#file .mention-concept', 'concept')
 		}
 		
 		function addId(what, prefix) {
